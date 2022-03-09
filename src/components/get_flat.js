@@ -1,7 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
+import Slider from '@material-ui/core/Slider';
 
 export const GetFlat = () => {
-    console.log(process.env.REACT_APP_BACKEND_URL)
+    const [floor, setFloor] = useState([3, 15])
+    const [area, setArea] = useState([20, 140])
+    const [type, setType] = useState("all")
+    const handleChange = (event, newValue) => {
+        setFloor(newValue);
+    };
+
+    const handleChangeArea = (event, newValue) => {
+        setArea(newValue)
+    }
+
+
+    const typeClick = (type) => {
+        setType(type)
+    }
     return (
         <div class="wmain">
             <section class="flat">
@@ -12,19 +27,37 @@ export const GetFlat = () => {
                     <div class="flat__nav_item">
                         <div class="flat__nav_name">Комнаты</div>
                         <div class="flat__nav_btn">
-                            <div>Все</div>
-                            <div>1</div>
-                            <div class="act">2</div>
-                            <div>3</div>
+                            <div className={type == "all" ? "act" : ""} onClick={() => typeClick("all")}>Все</div>
+                            <div className={type == "1" ? "act" : ""} onClick={() => typeClick("1")}>1</div>
+                            <div className={type == "2" ? "act" : ""} onClick={() => typeClick("2")}>2</div>
+                            <div className={type == "3" ? "act" : ""} onClick={() => typeClick("3")}>3</div>
                         </div>
                     </div>
                     <div class="flat__nav_item">
                         <div class="flat__nav_name">Этаж</div>
                         <div id="slid__etaj" class="slid"></div>
+                        <Slider className="slid_style_react"
+                            //defaultValue={floor}
+                            value={floor}
+                            step={1}
+                            min={1}
+                            max={18}
+                            onChange={handleChange}
+                            valueLabelDisplay="on"
+                        />
                     </div>
                     <div class="flat__nav_item">
                         <div class="flat__nav_name">Площадь</div>
                         <div id="slid__area" class="slid"></div>
+                        <Slider className="slid_style_react"
+                            //defaultValue={floor}
+                            value={area}
+                            step={1}
+                            min={1}
+                            max={160}
+                            onChange={handleChangeArea}
+                            valueLabelDisplay="on"
+                        />
                     </div>
                 </div>
                 <ul class="benefit__list">
