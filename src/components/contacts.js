@@ -8,41 +8,47 @@ export const Contacts = () => {
     }, [])
 
     return (
-        <section className="contacts">
-            <div className="cw_main">
-                <div className="cont_info">
-                    <div className="tm">
-                        Офис продаж<br /> <span><l>и контакты</l></span>
-                    </div>
-                    <div className="cont_addr">
-                        <span>Адрес</span>
-                        <p>Щелково,  Центральная ул. 71/1 (дальний вход в магазин ДА)</p>
-                    </div>
-                    <div className="cont_phone">
-                        <span>Телефон</span>
-                        <a className="roistat-phone" href={`tel:${phone.replaceAll(' ', '')}`}>{phone}</a>
-                    </div>
-                    <div className="cont_time">
-                        <span>Время работы</span>
-                        <p>пн-пт:  10:00 - 21:00;  <br /> сб-вск: 10:00 - 20:00</p>
+        <div className='wmain'>
+            <section className="contact">
+                <div class="contact__l">
+                    <div id="page4" class="tm tt">Офис продаж <br />и контакты</div>
+                    <ul class="cont_list">
+                        <li>
+                            Щелково,  Центральная ул. 71/1 <br />(дальний вход в магазин ДА)
+                        </li>
+                        <li>
+                            <a href="tel:+74951279553"><b>+7 495 127 95 53</b></a><br />
+                            <a href="#">info@sunny-park.ru</a>
+                        </li>
+                        <li>
+                            График работы:<br />
+                            Пн–Пт: 10:00 - 21:00<br />
+                            Сб–Вс: 10:00 - 20:00<br />
+                        </li>
+                    </ul>
+                    <div class="soc_list">
+                        <a href="#"><img src="img/soc_ico1.svg" /></a>
+                        <a href="#"><img src="img/soc_ico2.svg" /></a>
+                        <a href="#"><img src="img/soc_ico3.svg" /></a>
+                        <a href="#"><img src="img/soc_ico4.svg" /></a>
                     </div>
                 </div>
-                <div className="cont_map">
+                <div className="contact__r">
                     <div id="map">
                         <YMaps>
                             <div>
-                                <Map defaultState={{ center: [55.926317, 37.962464], zoom: 16, controls: [] }} style={{ width: "100%", height: "100%", position: "absolute" }}  >
+                                <Map defaultState={{ center: [55.926217, 37.963064], zoom: 16, controls: [] }} style={{ width: "100%", height: "100%", position: "absolute" }}  >
                                     <ZoomControl options={{ float: 'left' }} />
-                                    <Placemark geometry={[55.926317, 37.962464]}
+                                    <Placemark geometry={[55.926217, 37.963064]}
                                         options={{
                                             iconLayout: 'default#image',
                                             hideIconOnBalloonOpen: false,
-                                            iconImageSize: [90, 82],
-                                            iconImageOffset: [-20, -54],
+                                            iconImageSize: [50, 64],
+                                            iconImageOffset: [-25, -64],
                                             cursor: 'default',
                                             iconShadow: true,
                                             balloonclose: true,
-                                            iconImageHref: 'images/map_icon.png',
+                                            iconImageHref: 'img/cont_map_ico.svg',
                                             balloonPanelMaxMapArea: 0,
                                         }}
                                     />
@@ -52,7 +58,7 @@ export const Contacts = () => {
                     </div>
                 </div>
 
-            </div>
-        </section>
+            </section>
+        </div>
     )
 }

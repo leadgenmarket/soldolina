@@ -18,11 +18,14 @@ export const Header = () => {
     return (
         <React.Fragment>
             <section className="header">
-                <div className="cw_main">
-                    <div className="hd_inner">
-                        <h1>просторные <br /> Квартиры <span><l>бизнес-класса</l></span> <br /> с видом на парк</h1>
-                        <div className="hd_loc"><span>г. Щелково</span>, 38 минут до центра Москвы</div>
-                        <div className="hd_info">от  5.6  млн. ₽</div>
+                <img class="header_bg" src="img/header_bg.jpg" />
+                <img class="header_bg_mobile" src="img/header_bg_mobile.jpg" />
+                <div class="header_content">
+                    <div class="head_title">
+                        Квартиры в новом <br />микрорайоне города <br />Щелково от 4 млн ₽
+                    </div>
+                    <div class="head_map_info">
+                        <span>Детский сад во дворе</span>
                     </div>
                 </div>
             </section>

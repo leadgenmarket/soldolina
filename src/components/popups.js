@@ -39,8 +39,8 @@ export const Popups = () => {
             e.currentTarget.classList.remove("return")
         } else {
             document.querySelector('body').classList.remove('overflow')
-            document.querySelector('.popup_rgba').style.display = "none"
-            document.querySelectorAll('.popup_main').forEach(el => {
+            document.querySelector('.pu_rgba').style.display = "none"
+            document.querySelectorAll('.pu_inner').forEach(el => {
                 el.style.display = "none"
             });
         }
@@ -58,7 +58,7 @@ export const Popups = () => {
     function isDescendant(child) {
         var node = child.parentNode;
         while (node.classList != undefined) {
-            if (node.classList.contains('popup_main')) {
+            if (node.classList.contains('pu_inner')) {
 
                 return true;
             }
@@ -110,8 +110,8 @@ export const Popups = () => {
             })
         }
         document.querySelector('body').classList.remove('overflow')
-        document.querySelector('.popup_rgba').style.display = "none"
-        document.querySelectorAll('.popup_main').forEach(el => {
+        document.querySelector('.pu_rgba').style.display = "none"
+        document.querySelectorAll('.pu_inner').forEach(el => {
             el.style.display = "none"
         });
 
@@ -165,10 +165,10 @@ export const Popups = () => {
         if (document.querySelector('.blocks') != null) {
             document.querySelector('.blocks').addEventListener('click', (e) => {
                 let clicked = e.target
-                if (!clicked.classList.contains('popup_main') && !isDescendant(clicked) && e.target.nodeName.toLowerCase() != 'canvas') {
+                if (!clicked.classList.contains('pu_inner') && !isDescendant(clicked) && e.target.nodeName.toLowerCase() != 'canvas') {
                     document.querySelector('body').classList.remove('overflow')
-                    document.querySelector(".popup_rgba").style.display = "none";
-                    document.querySelectorAll('.popup_main').forEach(el => {
+                    document.querySelector(".pu_rgba").style.display = "none";
+                    document.querySelectorAll('.pu_inner').forEach(el => {
                         el.style.display = "none"
                     });
                 }
@@ -248,11 +248,11 @@ export const Popups = () => {
 
 
     return (
-        <section className="popups popup_rgba" style={{ display: "none" }}>
-            <div className="popup_table">
-                <div className="popup_cell">
+        <section className="pu_rgba plr" style={{ display: "none" }}>
+            <div className="pu_table">
+                <div className="pu_cell">
 
-                    <div className="popup_main popup_menu" style={{ display: "none" }}>
+                    <div className="pu_inner popup_menu" style={{ display: "none" }}>
                         <a href="#" className="closeform" onClick={close}></a>
                         <div className="menu_list">
                             <a href="near_house" onClick={clickMenu}><span>Ипотека от 0,1 %</span></a>
@@ -262,15 +262,18 @@ export const Popups = () => {
                         </div>
                     </div>
 
-                    <div className="popup_main pu_thx" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
-                        <div className="pu_tm">
-                            <span><l>Спасибо</l></span>
-                            <sub>В ближайшее время с вами <br /> свяжется наш специалист</sub>
+
+                    <div style={{ display: "none" }} class="pu_inner pu_thx pu_good">
+                        <div class="tm"><b>Спасибо</b></div>
+                        <div class="tm_dop">
+                            В ближайшее время с вами свяжется наш специалист
+                        </div>
+                        <div class="align_center">
+                            <a class="btn_main" href="#" onClick={close}>Закрыть</a>
                         </div>
                     </div>
 
-                    <div className="popup_main pu_call" style={{ display: "none" }}>
+                    <div className="pu_inner pu_call" style={{ display: "none" }}>
                         <a href="#" className="closeform" onClick={close}></a>
                         <div className="pu_tm">
                             <span>Заказать звонок</span>
@@ -293,7 +296,7 @@ export const Popups = () => {
                         </form>
                     </div>
 
-                    <div className="popup_main pu_ipot" style={{ display: "none" }}>
+                    <div className="pu_inner pu_ipot" style={{ display: "none" }}>
                         <a href="#" className="closeform" onClick={close}></a>
                         <div className="pu_tm">
                             <span><l>Получите расчет</l></span> ежемесячного платежа
@@ -332,31 +335,38 @@ export const Popups = () => {
                         </form>
                     </div>
 
-                    <div className="popup_main pu_flat" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
-                        <div className="pu_tm">
-                            <span><l>Двухкомнатная</l></span> квартира
-                        </div>
-                        <div className="area">
-                            <span>Общая площадь:<b><i>73,63</i> м<sup>2</sup></b></span>
-                            <span>Жилая площадь:<b><i>43,39</i> м<sup>2</sup></b></span>
-                        </div>
-                        <div className="flat_img"><img src="/images/flat_img.jpg" /></div>
-                        <form className="pu_form">
-                            <div className="form_tit">Узнайте стоимость квартиры <br /> на сегодня</div>
-                            <div className="form_in react_input_style input_name">
-                                <TextField name="name" label="Ваш имя" />
+                    <div className="pu_inner pu_flat" style={{ display: "none" }}>
+                        <div class="closeform" onClick={close}><img src="img/closeform.svg" /></div>
+                        <div class="tm"><b>Двухкомнатная квартира:</b></div>
+                        <div class="pu_flat_content">
+                            <div class="pu_flat_content__l">
+                                <ul class="pu_flat_char">
+                                    <li>
+                                        Общая площадь:
+                                        <b id="sq_all">73,63 м²</b>
+                                    </li>
+                                    <li>
+                                        Жилая площадь:
+                                        <b id="sq_zhil">43,39 м²</b>
+                                    </li>
+                                </ul>
                             </div>
-                            <div className="form_in react_input_style input_phone">
-                                <PhoneInput />
+                            <div class="pu_flat_content__r">
+                                <img src="img/pu_flat_img1.png" />
                             </div>
+                        </div>
+                        <form class="form_content form_w50">
+                            <div class="pu_flat_form_title">
+                                Узнайте стоимость квартиры на сегодня
+                            </div>
+                            <div class="form_item"><input type="text" className='name' placeholder="Имя" /></div>
+                            <div class="form_item"><PhoneInput placeholder="Телефон" /></div>
                             <input type="hidden" className="text" value='Узнать стоимость квартиры' />
-                            <button className="pu_btn" celtype="getFlat" onClick={sendForm.sendForm}>узнать стоимость</button>
+                            <div class="form_item form_item_100"><button celtype="getBestOffer" onClick={sendForm.sendForm} class="btn_main">Отправить</button></div>
                         </form>
-                        <div className="clr"></div>
                     </div>
 
-                    <div className="popup_main pu_liter" style={{ display: "none" }}>
+                    <div className="pu_inner pu_liter" style={{ display: "none" }}>
                         <a href="#" className="closeform" onClick={close}></a>
                         <div className="pu_tm">
                             <span><l>Планировки</l></span> <b>Литера 1</b>

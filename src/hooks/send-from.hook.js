@@ -2,10 +2,10 @@
 
 export const useSendForm = () => {
     const addError = (element) => {
-        element.closest('.form_in').querySelector('label').classList.add('Mui-error')
+        element.closest('.form_item').querySelector('input').classList.add('err')
     }
     const removeError = (element) => {
-        element.closest('.form_in').querySelector('label').classList.remove('Mui-error')
+        element.closest('.form_item').querySelector('input').classList.remove('err')
     }
     const checkPhone = (element) => {
         if (element.value.indexOf('_') != -1 || element.value.length !== 18) {
@@ -22,6 +22,7 @@ export const useSendForm = () => {
             addError(element)
             return false
         } else {
+            removeError(element)
             return true
         }
 
@@ -144,17 +145,17 @@ export const useSendForm = () => {
                 },
                 body: JSON.stringify(senddata)
             };
-            document.querySelectorAll('.popup_main').forEach((elem) => {
+            document.querySelectorAll('.pu_inner').forEach((elem) => {
                 elem.style.display = "none"
             })
-            document.querySelector('.popup_rgba').style.display = "block"
+            document.querySelector('.pu_rgba').style.display = "block"
             document.querySelector('.pu_thx').style.display = "block"
             console.log(senddata)
-            fetch("fd_log/ajax.php", requestOptions)
+            /*fetch("fd_log/ajax.php", requestOptions)
                 .then(data => data.ok)
                 .then(response => {
                     showAlert(senddata, celtype)
-                });
+                });*/
         }
     }
     return { sendForm }

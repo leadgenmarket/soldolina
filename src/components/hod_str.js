@@ -8,7 +8,7 @@ import "./css/slick-theme.min.css"
 
 
 export const Hod_str = () => {
-    const url = "https://sunny-park.ru/"
+    /*const url = "https://sunny-park.ru/"
     const slider = useRef(null);
     const [hod_a, setHod_a] = useState(null);
     const [active, setActive] = useState({
@@ -127,11 +127,42 @@ export const Hod_str = () => {
                 break
         }
         return name
-    }
+    }*/
 
 
     return (
-        <section className="hod_str">
+        <div className='wmain'>
+            <section className="deal">
+                <div className="tm tt"><b>Надежная сделка</b></div>
+                <div className="tm_dop">
+                    Жилой комплекс строится по ФЗ 214 с использованием проектного финансирвоания <br />и эксроу-счетов. Со всей документацией по объекту вы можете ознакомиться на <br />сайте Единой информационной системы жилищного строительства наш.дом.рф
+                </div>
+                <div className="deal__nav">
+                    <ul className="deal__nav_list">
+                        <li className="act">2021</li>
+                        <li>2022</li>
+                    </ul>
+                    <ul className="deal__nav_list">
+                        <li className="act">Декабрь</li>
+                        <li>Ноябрь</li>
+                        <li>Октябрь</li>
+                        <li>Сентябрь</li>
+                        <li>Август</li>
+                        <li>Июль</li>
+                        <li>Июль</li>
+                    </ul>
+                </div>
+                <div className="deal__img">
+                    <a href="#"><img src="img/etap_img1.jpg" /></a>
+                    <a href="#"><img src="img/etap_img2.jpg" /></a>
+                    <a href="#"><img src="img/etap_img3.jpg" /></a>
+                    <a href="#"><img src="img/etap_img4.jpg" /></a>
+                    <a href="#"><img src="img/etap_img5.jpg" /></a>
+                    <a href="#"><img src="img/etap_img6.jpg" /></a>
+                </div>
+            </section>
+        </div>
+        /*<section className="hod_str">
             <div className="hod_dec"></div>
             <div className="hod_right">
                 <div className="tm">
@@ -161,6 +192,6 @@ export const Hod_str = () => {
                 </div>
             </div>
             <div className="clr"></div>
-        </section>
+        </section>*/
     )
 }

@@ -3,31 +3,46 @@ import { BlocksContext } from "../context/blocksContext"
 import { Popups } from "./popups";
 import { Menu } from './menu';
 import { Header } from './header';
-import { Genplan } from './genplan';
-import { Plan_price } from './plan_price';
-import { How_buy } from './how_buy';
-import { Galery } from './galery';
-import { Hod_str } from './hod_str';
-import { Contacts } from './contacts';
-import { Footer } from './footer';
-import { Example } from "./example";
-
-
-
+import { Invest } from "./invest";
+import { Graph } from "./graph";
+import { Presentation } from "./presentation";
+import { BestOffers } from "./best_offers";
+import { Locations } from "./location";
+import { GetFlat } from "./get_flat";
+import { GetThere } from "./get_there";
+import { Podbor } from "./podbor";
+import { Ipoteka } from "./ipoteka";
+import { Gallery } from "./gallery";
+import { Hod_str } from "./hod_str";
+import { Contacts } from "./contacts";
+import { Footer } from "./footer";
 
 export const Loader = () => {
 
     const blocksImports = [
-        <Header />,
-        <Example />,
         <Menu />,
-        <Genplan />,
+        <Header />,
+        <Invest />,
+        <Graph />,
+        <Presentation />,
+        <BestOffers />,
+        <Locations />,
+        <GetFlat />,
+        <GetThere />,
+        <Podbor />,
+        <Ipoteka />,
+        <Gallery />,
+        <Hod_str />,
+        <Contacts />,
+        <Footer />,
+
+        /*<Genplan />,
         <Plan_price />,
         <How_buy />,
         <Galery />,
         <Hod_str />,
         <Contacts />,
-        <Footer />,
+        <Footer />,*/
     ]
 
     const loaded = useContext(BlocksContext)

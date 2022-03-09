@@ -66,20 +66,21 @@ export const Menu = () => {
     }, [])
 
     return (
-        <section className="menu">
-            <div className="cw_main">
-                <div className="menu_btn" onClick={showPopup} data="popup_menu"><span>Меню</span></div>
-                <logo><img src="images/logo.jpg" /></logo>
-                <div className="top_menu">
-                    <a href="how_buy" onClick={clickMenu}><span>Ипотека</span></a>
-                    <a href="plan_price" onClick={clickMenu}><span>Планировки и цены</span></a>
-                    <a href="park_get_flat" onClick={clickMenu}><span>Инфраструктура</span></a>
-                    <a href="contacts" onClick={clickMenu}><span>Контакты</span></a>
-                </div>
-                <div className="menu_right">
-                    <a className="call_phone roistat-phone" href="tel:+84959880202">8 495 988 02 02</a>
-                </div>
+        <section class="hl_top">
+            <div class="logo">Солнечная долина</div>
+            <div class="hl_nav">
+                <a href="#page1">Ипотека от 0,1 %</a>
+                <a href="#page2">Планировки и цены</a>
+                <a href="#page3">Инфраструктура</a>
+                <a href="#page4">Контакты</a>
+            </div>
+            <a class="hl_phone roistat-phone" href="tel:84959880202">8 495 988 02 02</a>
+            <div class="mob_menu_ico">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </section>
+
     )
 }

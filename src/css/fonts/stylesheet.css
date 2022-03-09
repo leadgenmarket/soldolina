@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'gilroybold';
+    src: url('gilroy-bold-webfont.eot');
+    src: url('gilroy-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gilroy-bold-webfont.woff2') format('woff2'),
+         url('gilroy-bold-webfont.woff') format('woff'),
+         url('gilroy-bold-webfont.ttf') format('truetype'),
+         url('gilroy-bold-webfont.svg#gilroybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroymedium';
+    src: url('gilroy-medium-webfont.eot');
+    src: url('gilroy-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gilroy-medium-webfont.woff2') format('woff2'),
+         url('gilroy-medium-webfont.woff') format('woff'),
+         url('gilroy-medium-webfont.ttf') format('truetype'),
+         url('gilroy-medium-webfont.svg#gilroymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroyregular';
+    src: url('gilroy-regular-webfont.eot');
+    src: url('gilroy-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gilroy-regular-webfont.woff2') format('woff2'),
+         url('gilroy-regular-webfont.woff') format('woff'),
+         url('gilroy-regular-webfont.ttf') format('truetype'),
+         url('gilroy-regular-webfont.svg#gilroyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroyregular_italic';
+    src: url('gilroy-regularitalic-webfont.eot');
+    src: url('gilroy-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gilroy-regularitalic-webfont.woff2') format('woff2'),
+         url('gilroy-regularitalic-webfont.woff') format('woff'),
+         url('gilroy-regularitalic-webfont.ttf') format('truetype'),
+         url('gilroy-regularitalic-webfont.svg#gilroyregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroysemibold';
+    src: url('gilroy-semibold_600-webfont.eot');
+    src: url('gilroy-semibold_600-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gilroy-semibold_600-webfont.woff2') format('woff2'),
+         url('gilroy-semibold_600-webfont.woff') format('woff'),
+         url('gilroy-semibold_600-webfont.ttf') format('truetype'),
+         url('gilroy-semibold_600-webfont.svg#gilroysemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

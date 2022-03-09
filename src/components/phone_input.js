@@ -1,7 +1,7 @@
 import { TextField } from "@material-ui/core";
 import { useState } from "react";
 
-export const PhoneInput = () => {
+export const PhoneInput = (args) => {
     const [phone, setPhone] = useState("")
     const phoneChange = (e) => {
         let lastVal = phone;
@@ -60,5 +60,5 @@ export const PhoneInput = () => {
             }
         }
     }
-    return (<TextField name="phone" label="Ваш телефон" onChange={phoneChange} value={phone} />)
+    return (<input className="ym-record-keys" name="phone" label="Ваш телефон" onChange={phoneChange} value={phone} {...args} />)
 }
