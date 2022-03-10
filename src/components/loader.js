@@ -35,40 +35,31 @@ export const Loader = () => {
         <Hod_str />,
         <Contacts />,
         <Footer />,
-
-        /*<Genplan />,
-        <Plan_price />,
-        <How_buy />,
-        <Galery />,
-        <Hod_str />,
-        <Contacts />,
-        <Footer />,*/
     ]
 
     const loaded = useContext(BlocksContext)
-    loaded.setBlocks(blocksImports.length)
 
     const LoadBlock = (block) => {
-        return <Suspense fallback={<div>Загрузка...</div>}>{blocksImports}</Suspense>
+        return <Suspense fallback={<div>Загрузка...</div>}>{block}</Suspense>
     }
 
     const generateHtml = () => {
-        /*let toDraw = []
+        let toDraw = []
         for (let i = 0; i < loaded.blocks; i++) {
             toDraw.push(LoadBlock(blocksImports[i]))
-        }*/
+        }
         return (
 
             <div className="blocks" data={loaded.menuClick ? "true" : ""}>
                 <Popups />
-                {blocksImports.map((block) =>
+                {toDraw.map((block) =>
                     block
                 )}
             </div>
 
         )
     }
-    /*const handleScroll = (event) => {
+    const handleScroll = (event) => {
 
         if (loaded.blocks < blocksImports.length) {
             loaded.setBlocks(blocksImports.length) //fix later
@@ -81,7 +72,7 @@ export const Loader = () => {
         if (loaded.blocks < blocksImports.length) {
             window.addEventListener('scroll', handleScroll, true);
         }
-    })*/
+    })
     return generateHtml()
 
 }

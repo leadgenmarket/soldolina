@@ -263,13 +263,13 @@ export const Popups = () => {
                     </div>
 
 
-                    <div style={{ display: "none" }} class="pu_inner pu_thx pu_good">
-                        <div class="tm"><b>Спасибо</b></div>
-                        <div class="tm_dop">
+                    <div style={{ display: "none" }} className="pu_inner pu_thx pu_good">
+                        <div className="tm"><b>Спасибо</b></div>
+                        <div className="tm_dop">
                             В ближайшее время с вами свяжется наш специалист
                         </div>
-                        <div class="align_center">
-                            <a class="btn_main" href="#" onClick={close}>Закрыть</a>
+                        <div className="align_center">
+                            <a className="btn_main" href="#" onClick={close}>Закрыть</a>
                         </div>
                     </div>
 
@@ -290,57 +290,53 @@ export const Popups = () => {
                             <div className="form_in react_input_style">
                                 <TextField onChange={timeFieldChange} name="name" label="Удобное время для звонка" className="pu_time" />
                             </div>
-                            <input type="hidden" class="text" value="Заказать звонок" />
+                            <input type="hidden" className="text" value="Заказать звонок" />
                             <input type="hidden" className="dop-info" data="Удобное время звонка" value={time} />
                             <button className="pu_btn" celtype="getCall" onClick={sendForm.sendForm}>Заказать звонок</button>
                         </form>
                     </div>
-
-                    <div className="pu_inner pu_ipot" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
-                        <div className="pu_tm">
-                            <span><l>Получите расчет</l></span> ежемесячного платежа
-                            <sub>по ипотеке с господдержкой</sub>
-                        </div>
-                        <form className="pu_form">
-                            <NativeSelect
-                                onChange={(event) => { setPervIpot(event.target.value) }} className="form_in react_select_style input_vznos">
-                                <option value={""}>Первоначальный взнос</option>
-                                <option value={"10%"}>10%</option>
-                                <option value={"20%"}>20%</option>
-                                <option value={"30%"}>30%</option>
-                                <option value={"40%"}>40%</option>
-                                <option value={"50%"}>50%</option>
-                            </NativeSelect>
-                            <NativeSelect
-                                onChange={(event) => { setSrokIpot(event.target.value) }} className="form_in react_select_style input_srok">
-                                <option value={""}>На срок</option>
-                                <option value={"5 лет"}>5 лет</option>
-                                <option value={"10 лет"}>10 лет</option>
-                                <option value={"15 лет"}>15 лет</option>
-                                <option value={"20 лет"}>20 лет</option>
-                                <option value={"25 лет"}>25 лет</option>
-                                <option value={"30 лет"}>30 лет</option>
-                            </NativeSelect>
-                            <div className="form_in react_input_style input_name">
-                                <TextField name="name" label="Ваш имя" />
+                    <div className="pu_inner pu_get" style={{ display: "none" }}>
+                        <div className="closeform" onClick={close}><img src="img/closeform.svg" /></div>
+                        <div className="tm"><b>Получите расчет ежемесячного платежа по ипотеке с господдержкой</b></div>
+                        <form className="form_content form_w50">
+                            <div className="form_item form_item_select">
+                                <NativeSelect
+                                    onChange={(event) => { setPervIpot(event.target.value) }} className="select_style">
+                                    <option value={""}>Первоначальный взнос</option>
+                                    <option value={"10%"}>10%</option>
+                                    <option value={"20%"}>20%</option>
+                                    <option value={"30%"}>30%</option>
+                                    <option value={"40%"}>40%</option>
+                                    <option value={"50%"}>50%</option>
+                                </NativeSelect>
                             </div>
-                            <div className="form_in react_input_style input_phone">
-                                <PhoneInput />
+                            <div className="form_item form_item_select">
+                                <NativeSelect
+                                    onChange={(event) => { setSrokIpot(event.target.value) }} className="select_style">
+                                    <option value={""}>На срок</option>
+                                    <option value={"5 лет"}>5 лет</option>
+                                    <option value={"10 лет"}>10 лет</option>
+                                    <option value={"15 лет"}>15 лет</option>
+                                    <option value={"20 лет"}>20 лет</option>
+                                    <option value={"25 лет"}>25 лет</option>
+                                    <option value={"30 лет"}>30 лет</option>
+                                </NativeSelect>
                             </div>
-                            <input type="hidden" class="dop-info" data="Первоначальный взнос: " value={pervIpot} />
-                            <input type="hidden" class="dop-info" data="Срок: " value={srokIpot} />
+                            <div className="form_item"><input type="text" className='name' placeholder="Имя" /></div>
+                            <div className="form_item"><PhoneInput placeholder="Телефон" /></div>
+                            <input type="hidden" className="dop-info" data="Первоначальный взнос: " value={pervIpot} />
+                            <input type="hidden" className="dop-info" data="Срок: " value={srokIpot} />
                             <input type="hidden" className="text" value='Получить расчет' />
-                            <button className="pu_btn" celtype="getIpot" onClick={sendForm.sendForm}>Получить расчет</button>
+                            <div className="form_item form_item_100"><button onClick={sendForm.sendForm} className="btn_main">Отправить</button></div>
                         </form>
                     </div>
 
                     <div className="pu_inner pu_flat" style={{ display: "none" }}>
-                        <div class="closeform" onClick={close}><img src="img/closeform.svg" /></div>
-                        <div class="tm"><b>Двухкомнатная квартира:</b></div>
-                        <div class="pu_flat_content">
-                            <div class="pu_flat_content__l">
-                                <ul class="pu_flat_char">
+                        <div className="closeform" onClick={close}><img src="img/closeform.svg" /></div>
+                        <div className="tm"><b>Двухкомнатная квартира:</b></div>
+                        <div className="pu_flat_content">
+                            <div className="pu_flat_content__l">
+                                <ul className="pu_flat_char">
                                     <li>
                                         Общая площадь:
                                         <b id="sq_all">73,63 м²</b>
@@ -351,18 +347,18 @@ export const Popups = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div class="pu_flat_content__r">
+                            <div className="pu_flat_content__r">
                                 <img src="img/pu_flat_img1.png" />
                             </div>
                         </div>
-                        <form class="form_content form_w50">
-                            <div class="pu_flat_form_title">
+                        <form className="form_content form_w50">
+                            <div className="pu_flat_form_title">
                                 Узнайте стоимость квартиры на сегодня
                             </div>
-                            <div class="form_item"><input type="text" className='name' placeholder="Имя" /></div>
-                            <div class="form_item"><PhoneInput placeholder="Телефон" /></div>
+                            <div className="form_item"><input type="text" className='name' placeholder="Имя" /></div>
+                            <div className="form_item"><PhoneInput placeholder="Телефон" /></div>
                             <input type="hidden" className="text" value='Узнать стоимость квартиры' />
-                            <div class="form_item form_item_100"><button celtype="getBestOffer" onClick={sendForm.sendForm} class="btn_main">Отправить</button></div>
+                            <div className="form_item form_item_100"><button celtype="getBestOffer" onClick={sendForm.sendForm} className="btn_main">Отправить</button></div>
                         </form>
                     </div>
 

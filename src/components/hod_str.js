@@ -8,7 +8,6 @@ import "./css/slick-theme.min.css"
 
 
 export const Hod_str = () => {
-    /*const url = "https://sunny-park.ru/"
     const slider = useRef(null);
     const [hod_a, setHod_a] = useState(null);
     const [active, setActive] = useState({
@@ -42,7 +41,7 @@ export const Hod_str = () => {
 
     useEffect(() => {
         const headers = { 'Content-Type': 'application/json' }
-        fetch(url + "/hod_react.php", headers)
+        fetch(process.env.REACT_APP_BACKEND_URL + "/hod_react.php", headers)
             .then(res => res.json())
             .then((result) => {
                 console.log(result)
@@ -127,7 +126,7 @@ export const Hod_str = () => {
                 break
         }
         return name
-    }*/
+    }
 
 
     return (
@@ -139,59 +138,32 @@ export const Hod_str = () => {
                 </div>
                 <div className="deal__nav">
                     <ul className="deal__nav_list">
-                        <li className="act">2021</li>
-                        <li>2022</li>
+                        {Object.keys(hod_a.struct).reverse().map((year) => {
+                            return <li className={active.year == year ? "act" : ""} data={year} onClick={yearClick}>{year}</li>
+                        })}
                     </ul>
                     <ul className="deal__nav_list">
-                        <li className="act">Декабрь</li>
-                        <li>Ноябрь</li>
-                        <li>Октябрь</li>
-                        <li>Сентябрь</li>
-                        <li>Август</li>
-                        <li>Июль</li>
-                        <li>Июль</li>
+                        {Object.keys(hod_a.struct[active.year]).reverse().map((month) => {
+                            return <li href="#" onClick={monthClick} data={month} className={active.month == month ? "act" : ""}>{monthName(month)}</li>
+                        })}
                     </ul>
                 </div>
-                <div className="deal__img">
-                    <a href="#"><img src="img/etap_img1.jpg" /></a>
-                    <a href="#"><img src="img/etap_img2.jpg" /></a>
-                    <a href="#"><img src="img/etap_img3.jpg" /></a>
-                    <a href="#"><img src="img/etap_img4.jpg" /></a>
-                    <a href="#"><img src="img/etap_img5.jpg" /></a>
-                    <a href="#"><img src="img/etap_img6.jpg" /></a>
-                </div>
-            </section>
-        </div>
-        /*<section className="hod_str">
-            <div className="hod_dec"></div>
-            <div className="hod_right">
-                <div className="tm">
-                    <span><l>Надежная</l></span> и <br /> безопасная сделка
-                </div>
-                <p>Жилой комплекс строится по ФЗ 214 с использованием проектного финансирвоания и эксроу-счетов. Со всей документацией по объекту вы можете ознакомиться на сайте Единой информационной системы жилищного строительства <a href="https://наш.дом.рф/сервисы/каталог-новостроек/список-объектов/список?&devId=7851&objStatus=0" target="blank_">наш.дом.рф</a></p>
-            </div>
-            <div className="hod_left">
-                <Slider className="hod_slid" {...settings}>
+                <Slider ref={slider} className="deal__img" {...settings}>
                     {photos ? photos.map((photo) => {
-                        return <div className="hod_in">
-                            <img src={url + photo} />
-                        </div>
+                        return <a href="#">
+                            <img src={process.env.REACT_APP_BACKEND_URL + "/" + photo} />
+                        </a>
                     }) : ""}
                 </Slider>
-                <div className="hod_nav">
-                    <div className="year_list">
-                        {Object.keys(hod_a.struct).reverse().map((year) => {
-                            return <a href="#" className={active.year == year ? "act" : ""} data={year} onClick={yearClick} data={year}><span>{year}</span></a>
-                        })}
-                    </div>
-                    <div className="month_list">
-                        {Object.keys(hod_a.struct[active.year]).reverse().map((month) => {
-                            return <a href="#" onClick={monthClick} data={month} className={active.month == month ? "act" : ""}><span>{monthName(month)}</span></a>
-                        })}
-                    </div>
-                </div>
-            </div>
-            <div className="clr"></div>
-        </section>*/
+                {
+                    /*
+                    Стрелки для слайдера
+                    <div class="hod_nav_el">
+                        <div class="hod_nav_l" onClick={() => { slider.current.slickPrev() }}></div>
+                        <div class="hod_nav_r" onClick={() => { slider.current.slickNext() }}></div>
+                    </div>*/
+                }
+            </section>
+        </div>
     )
 }

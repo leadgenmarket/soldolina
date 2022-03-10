@@ -15,30 +15,12 @@ export const Menu = () => {
         document.querySelector('.' + e.currentTarget.getAttribute('data')).style.display = "block"
     }
 
-    const handleScroll = (event) => {
-
-        let lastPosition = parseInt(document.querySelector('html').getAttribute('lastPosition'))
-        if (lastPosition != undefined) {
-            if (lastPosition < window.scrollY + 100) {
-                //console.log('down')
-                document.querySelectorAll('section').forEach((section) => {
-                    if (window.scrollY + (window.innerHeight / 2.5) > section.offsetTop && !section.classList.contains('showed')) {
-                        section.classList.add('showed')
-                    }
-                })
-            } else {
-                //console.log('up')
-            }
-        }
-        document.querySelector('html').setAttribute('lastPosition', window.scrollY)
-    }
-
     const clickMenu = (e) => {
         e.preventDefault()
         let popup = e.currentTarget.getAttribute("href")
-        if (blocks.blocks < 20) {
+        if (blocks.blocks < 15) {
             blocks.setMenuClick(true)
-            blocks.setBlocks(20)
+            blocks.setBlocks(15)
             setTimeout(() => {
                 window.scrollTo({
                     top: document.querySelector("." + popup).offsetTop,
@@ -59,20 +41,14 @@ export const Menu = () => {
         }
     }
 
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, true);
-
-    }, [])
-
     return (
         <section class="hl_top">
             <div class="logo">Солнечная долина</div>
             <div class="hl_nav">
-                <a href="#page1">Ипотека от 0,1 %</a>
-                <a href="#page2">Планировки и цены</a>
-                <a href="#page3">Инфраструктура</a>
-                <a href="#page4">Контакты</a>
+                <a href="ipoteka" onClick={clickMenu}>Ипотека от 0,1 %</a>
+                <a href="flat" onClick={clickMenu}>Планировки и цены</a>
+                <a href="location__time" onClick={clickMenu}>Инфраструктура</a>
+                <a href="contact" onClick={clickMenu}>Контакты</a>
             </div>
             <a class="hl_phone roistat-phone" href="tel:84959880202">8 495 988 02 02</a>
             <div class="mob_menu_ico">
