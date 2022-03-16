@@ -1623,7 +1623,7 @@ input {
 }
 
 .deal__img .slick-slide a {
-    display: block;
+    display: block !important;
     text-decoration: none;
 }
 
@@ -2245,7 +2245,43 @@ input {
     }
 }
 
+@media screen and (max-width: 420px) {
+    .deal__img {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .gallery__big .slick-next, .gallery__big .slick-prev, .deal__img .slick-next, .deal__img .slick-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery__big .slick-prev {
+        left: 10px;
+    }
+
+    .gallery__big .slick-next {
+        right: 10px;
+    }
+
+    .deal__img .slick-next {
+        right: 10px;
+    }
+
+    .deal__img .slick-prev {
+        left: 10px;
+    }
+}
+
 @media screen and (max-width: 380px) {
+    .deal__nav_list + .deal__nav_list {
+        margin-top: 12px;
+    }
+    .deal__nav {
+        margin-top: 26px;
+    }
+    .deal__img {
+        margin-top: 15px;
+    }
     .soc_list {
         margin-top: 23px;
     }
@@ -2323,4 +2359,3 @@ input {
         bottom: 4vw;
     }
 }
-

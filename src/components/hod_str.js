@@ -25,16 +25,16 @@ export const Hod_str = () => {
         variableWidth: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1150,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    variableWidth: false,
-                }
-            }
-        ],
+        // responsive: [
+        //     {
+        //         breakpoint: 1150,
+        //         settings: {
+        //             slidesToShow: 1,
+        //             slidesToScroll: 1,
+        //             variableWidth: false,
+        //         }
+        //     }
+        // ],
         // draggable: false,
     };
 
