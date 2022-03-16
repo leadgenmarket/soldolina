@@ -113,6 +113,7 @@ input {
 }
 .container_main {
     min-width: 320px;
+    background: #F2F3F4;
 }
 .clr {
     clear: both;
@@ -271,8 +272,9 @@ input {
 }
 
 .invest {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #fff;
 }
 
 .tm, .graph__r {
@@ -1561,6 +1563,77 @@ input {
     white-space: nowrap;
 }
 
+.MuiSlider-root {
+    padding: 0 !important;
+    display: block !important;
+}
+
+.slid {
+    opacity: 0;
+    margin-top: 55px;
+}
+
+.MuiSlider-root {
+    color: #000000 !important;
+}
+
+.flat__nav_btn {
+    margin-top: 44px;
+}
+
+.gallery__big .slick-slide img {
+    display: block !important;
+    width: 100% !important;
+}
+
+.gallery__big .slick-slide {
+    width: 100%;
+}
+
+.gallery__big .slick-next, .gallery__big .slick-prev, .deal__img .slick-next, .deal__img .slick-prev {
+    outline: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background: rgba(0,0,0,0.5);
+    z-index: 50;
+    border: 1px solid #fff;
+    position: absolute;
+}
+.gallery__big .slick-next, .deal__img .slick-next {
+    right: 20px;
+    left: auto;
+}
+
+.gallery__big .slick-prev, .slick-next, .deal__img .slick-prev {
+    left: 20px;
+}
+
+.deal__img .slick-next, .deal__img .slick-prev {
+    width: 50px;
+    height: 50px;
+}
+
+.deal__img .slick-prev {
+    left: 10px;
+}
+
+.deal__img .slick-next {
+    right: 10px;
+}
+
+.deal__img .slick-slide a {
+    display: block;
+    text-decoration: none;
+}
+
+.deal__img .slick-slide a img {
+    display: block;
+    height: 161px;
+}
+
+
+
 
 
 /*@media*/
@@ -1716,8 +1789,8 @@ input {
     }
 
     .invest {
-        margin-top: 60px;
-        margin-bottom: 60px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .benefit, .flat, .get_there, .ipoteka, .gallery, .deal, .contact {

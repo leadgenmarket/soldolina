@@ -27,6 +27,9 @@ export const Gallery = () => {
         variableWidth: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        adaptiveHeight: true,
+		variableWidth: false,
+        arrows: true,
         responsive: [
             {
                 breakpoint: 1150,
