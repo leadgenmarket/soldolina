@@ -30,7 +30,7 @@ export const Podbor = () => {
                 <b>Получите подборку</b> свободных квартир с планировками и ценами
             </div>
             <form class="form_style">
-                <div class="form_title">Отправляем в теченеи 30 минут</div>
+                <div class="form_title">Отправляем в течении 30 минут</div>
                 <div class="flat__nav">
                     <div class="flat__nav_item">
                         <div class="flat__nav_name">Комнаты</div>

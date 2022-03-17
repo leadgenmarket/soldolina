@@ -2,7 +2,7 @@ import React from "react"
 export const Invest = () => {
     return (<div class="invest plr">
         <div class="wmain">
-            <div class="tm"><b>Инвестируй в свой будущее</b></div>
+            <div class="tm"><b>Инвестируй в своё будущее</b></div>
             <ul class="invest__list">
                 <li>
                     <div class="invest_item">

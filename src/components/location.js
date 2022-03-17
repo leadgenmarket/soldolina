@@ -7,7 +7,7 @@ export const Locations = () => {
             <div id="page3" class="tm tt"><b>Уникальное расположение</b></div>
             <div class="location__time">
                 <span><img src="img/location_ico.svg" /><div><b>1 минута </b>пешком до детского сада</div></span>
-                <span><img src="img/location_ico.svg" /><div><b>5 минут </b>пешком до леспорковой зоны</div></span>
+                <span><img src="img/location_ico.svg" /><div><b>5 минут </b>пешком до лесопарковой зоны</div></span>
                 <span><img src="img/location_ico.svg" /><div><b>15 минут </b>пешком до ТЦ “Глобус” и “Касторамы”</div></span>
             </div>
             <div class="location__map">
@@ -85,7 +85,7 @@ export const Locations = () => {
                         </div>
                     </YMaps>
                 </div>
-                <div class="location__wiev_plan">Смореть все планировки</div>
+                <div class="location__wiev_plan">Смотреть все планировки</div>
             </div>
             <div class="location__map_info">
                 <p> В жилом комплексе будет построена новая школа, а пока строительство не завершено <b>застройщик оплачивает школьный автобус для детей</b>, проживающих в “Солнечной Долине”</p>
