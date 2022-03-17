@@ -1,6 +1,16 @@
 import React from "react"
 import { useSendForm } from "../hooks/send-from.hook";
+import { BestOffers } from "./best_offers";
+import { Contacts } from "./contacts";
+import { Footer } from "./footer";
+import { Gallery } from "./gallery";
+import { GetFlat } from "./get_flat";
+import { GetThere } from "./get_there";
+import { Hod_str } from "./hod_str";
+import { Ipoteka } from "./ipoteka";
+import { Locations } from "./location";
 import { PhoneInput } from "./phone_input"
+import { Podbor } from "./podbor";
 
 export const Presentation = () => {
     const sendForm = useSendForm();
@@ -21,6 +31,16 @@ export const Presentation = () => {
                         </div>
                     </form>
                 </div>
+                <BestOffers />
+                <Locations />
+                <GetFlat />
+                <GetThere />,
+                <Podbor />,
+                <Ipoteka />,
+                <Gallery />,
+                <Hod_str />,
+                <Contacts />,
+                <Footer />
             </div>
         </div>
     )

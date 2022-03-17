@@ -130,40 +130,38 @@ export const Hod_str = () => {
 
 
     return (
-        <div className='wmain'>
-            <section className="deal">
-                <div className="tm tt"><b>Надежная сделка</b></div>
-                <div className="tm_dop">
-                    Жилой комплекс строится по ФЗ 214 с использованием проектного финансирвоания <br />и эксроу-счетов. Со всей документацией по объекту вы можете ознакомиться на <br />сайте Единой информационной системы жилищного строительства наш.дом.рф
-                </div>
-                <div className="deal__nav">
-                    <ul className="deal__nav_list">
-                        {Object.keys(hod_a.struct).reverse().map((year) => {
-                            return <li className={active.year == year ? "act" : ""} data={year} onClick={yearClick}>{year}</li>
-                        })}
-                    </ul>
-                    <ul className="deal__nav_list">
-                        {Object.keys(hod_a.struct[active.year]).reverse().map((month) => {
-                            return <li href="#" onClick={monthClick} data={month} className={active.month == month ? "act" : ""}>{monthName(month)}</li>
-                        })}
-                    </ul>
-                </div>
-                <Slider ref={slider} className="deal__img" {...settings}>
-                    {photos ? photos.map((photo) => {
-                        return <a href="#">
-                            <img src={process.env.REACT_APP_BACKEND_URL + "/" + photo} />
-                        </a>
-                    }) : ""}
-                </Slider>
-                {
-                    /*
-                    Стрелки для слайдера
-                    <div class="hod_nav_el">
-                        <div class="hod_nav_l" onClick={() => { slider.current.slickPrev() }}></div>
-                        <div class="hod_nav_r" onClick={() => { slider.current.slickNext() }}></div>
-                    </div>*/
-                }
-            </section>
-        </div>
+        <section className="deal">
+            <div className="tm tt"><b>Надежная сделка</b></div>
+            <div className="tm_dop">
+                Жилой комплекс строится по ФЗ 214 с использованием проектного финансирвоания <br />и эксроу-счетов. Со всей документацией по объекту вы можете ознакомиться на <br />сайте Единой информационной системы жилищного строительства наш.дом.рф
+            </div>
+            <div className="deal__nav">
+                <ul className="deal__nav_list">
+                    {Object.keys(hod_a.struct).reverse().map((year) => {
+                        return <li className={active.year == year ? "act" : ""} data={year} onClick={yearClick}>{year}</li>
+                    })}
+                </ul>
+                <ul className="deal__nav_list">
+                    {Object.keys(hod_a.struct[active.year]).reverse().map((month) => {
+                        return <li href="#" onClick={monthClick} data={month} className={active.month == month ? "act" : ""}>{monthName(month)}</li>
+                    })}
+                </ul>
+            </div>
+            <Slider ref={slider} className="deal__img" {...settings}>
+                {photos ? photos.map((photo) => {
+                    return <a href="#">
+                        <img src={process.env.REACT_APP_BACKEND_URL + "/" + photo} />
+                    </a>
+                }) : ""}
+            </Slider>
+            {
+                /*
+                Стрелки для слайдера
+                <div class="hod_nav_el">
+                    <div class="hod_nav_l" onClick={() => { slider.current.slickPrev() }}></div>
+                    <div class="hod_nav_r" onClick={() => { slider.current.slickNext() }}></div>
+                </div>*/
+            }
+        </section>
     )
 }

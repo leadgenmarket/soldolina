@@ -110,64 +110,62 @@ export const GetFlat = () => {
             })
     }, [])
     return (
-        <div class="wmain">
-            <section class="flat">
-                <div id="page2" class="tm tt">
-                    <b>Выберите квартиру</b> по <br />нужным параметрам
-                </div>
-                <div class="flat__nav">
-                    <div class="flat__nav_item">
-                        <div class="flat__nav_name">Комнаты</div>
-                        <div class="flat__nav_btn">
-                            <div className={type == "all" ? "act" : ""} onClick={() => typeClick("all")}>Все</div>
-                            <div className={type == "1" ? "act" : ""} onClick={() => typeClick("1")}>1</div>
-                            <div className={type == "2" ? "act" : ""} onClick={() => typeClick("2")}>2</div>
-                            <div className={type == "3" ? "act" : ""} onClick={() => typeClick("3")}>3</div>
-                        </div>
-                    </div>
-                    <div class="flat__nav_item">
-                        <div class="flat__nav_name">Этаж</div>
-                        <div id="slid__etaj" class="slid"></div>
-                        <Slider className="slid_style_react"
-                            //defaultValue={floor}
-                            value={floors}
-                            step={1}
-                            min={1}
-                            max={18}
-                            onChange={handleChange}
-                            valueLabelDisplay="on"
-                        />
-                    </div>
-                    <div class="flat__nav_item">
-                        <div class="flat__nav_name">Площадь</div>
-                        <div id="slid__area" class="slid"></div>
-                        <Slider className="slid_style_react"
-                            //defaultValue={floor}
-                            value={area}
-                            step={1}
-                            min={1}
-                            max={160}
-                            onChange={handleChangeArea}
-                            valueLabelDisplay="on"
-                        />
+        <section class="flat">
+            <div id="page2" class="tm tt">
+                <b>Выберите квартиру</b> по <br />нужным параметрам
+            </div>
+            <div class="flat__nav">
+                <div class="flat__nav_item">
+                    <div class="flat__nav_name">Комнаты</div>
+                    <div class="flat__nav_btn">
+                        <div className={type == "all" ? "act" : ""} onClick={() => typeClick("all")}>Все</div>
+                        <div className={type == "1" ? "act" : ""} onClick={() => typeClick("1")}>1</div>
+                        <div className={type == "2" ? "act" : ""} onClick={() => typeClick("2")}>2</div>
+                        <div className={type == "3" ? "act" : ""} onClick={() => typeClick("3")}>3</div>
                     </div>
                 </div>
-                <ul class="benefit__list">
-                    {filteredFlats.map((flat) => <li>
-                        <div class="benefit__item">
-                            <a class="benefit__img" onClick={flatClick} id={flat["id"]} href="#"><img src={flat.img} /></a>
-                            <div class="benefit__title">
-                                {kvTitle(flat.class)} {flat.info} м²
-                            </div>
-                            <a class="benefit__btn" onClick={flatClick} id={flat["id"]} href="#">Записаться на просмотр</a>
+                <div class="flat__nav_item">
+                    <div class="flat__nav_name">Этаж</div>
+                    <div id="slid__etaj" class="slid"></div>
+                    <Slider className="slid_style_react"
+                        //defaultValue={floor}
+                        value={floors}
+                        step={1}
+                        min={1}
+                        max={18}
+                        onChange={handleChange}
+                        valueLabelDisplay="on"
+                    />
+                </div>
+                <div class="flat__nav_item">
+                    <div class="flat__nav_name">Площадь</div>
+                    <div id="slid__area" class="slid"></div>
+                    <Slider className="slid_style_react"
+                        //defaultValue={floor}
+                        value={area}
+                        step={1}
+                        min={1}
+                        max={160}
+                        onChange={handleChangeArea}
+                        valueLabelDisplay="on"
+                    />
+                </div>
+            </div>
+            <ul class="benefit__list">
+                {filteredFlats.map((flat) => <li>
+                    <div class="benefit__item">
+                        <a class="benefit__img" onClick={flatClick} id={flat["id"]} href="#"><img src={flat.img} /></a>
+                        <div class="benefit__title">
+                            {kvTitle(flat.class)} {flat.info} м²
                         </div>
-                    </li>
-                    )}
-                </ul>
-                {!hideMore ? <div class="benefit__list_btn">
-                    <div onClick={moreClick} class="btn_white">Показать еще</div>
-                </div> : ""}
-            </section>
-        </div>
+                        <a class="benefit__btn" onClick={flatClick} id={flat["id"]} href="#">Записаться на просмотр</a>
+                    </div>
+                </li>
+                )}
+            </ul>
+            {!hideMore ? <div class="benefit__list_btn">
+                <div onClick={moreClick} class="btn_white">Показать еще</div>
+            </div> : ""}
+        </section>
     )
 }

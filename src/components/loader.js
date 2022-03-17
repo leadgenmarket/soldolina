@@ -25,16 +25,6 @@ export const Loader = () => {
         <Invest />,
         <Graph />,
         <Presentation />,
-        <BestOffers />,
-        <Locations />,
-        <GetFlat />,
-        <GetThere />,
-        <Podbor />,
-        <Ipoteka />,
-        <Gallery />,
-        <Hod_str />,
-        <Contacts />,
-        <Footer />,
     ]
 
     const loaded = useContext(BlocksContext)
