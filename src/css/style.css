@@ -1633,6 +1633,22 @@ input {
 }
 
 
+.MuiNativeSelect-select {
+    padding: 0 !important;
+    height: 55px !important;
+    background: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+.MuiSvgIcon-root {
+    display: none !important;
+}
+
+.MuiInput-underline:before, .MuiInput-underline:after {
+    display: none !important;
+}
 
 
 
@@ -1869,6 +1885,15 @@ input {
 }
 
 @media screen and (max-width: 740px) {
+    .form_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form_item .btn_main {
+        margin-top: 10px;
+    }
     .form_w50 .form_item {
         margin-bottom: 0;
     }
@@ -2340,9 +2365,37 @@ input {
              -o-background-size: auto 86%;
                 background-size: auto 86%;
     }
+    .flat__nav_btn {
+        margin-top: 15px;
+    }
+    .flat__nav {
+        margin-top: 28px;
+    }
+    .pu_flat_content {
+        display: block;
+    }
+    .pu_flat_content__l, .pu_flat_content__r {
+        width: auto;
+    }
+
+    .pu_flat_content__r {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 360px) {
+    .ipoteka__list > li {
+        font-size: 18px;
+    }
+    .tm {
+        font-size: 22px;
+    }
+    .btn_main {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
     .pu_flat_char > li {
         font-size: 15px;
     }
@@ -2357,5 +2410,12 @@ input {
         font-size: 15px;
         left: 48vw;
         bottom: 4vw;
+    }
+    .pu_inner .tm {
+        font-size: 30px;
+    }
+    .graph__r {
+        font-size: 30px;
+        line-height: 38px;
     }
 }

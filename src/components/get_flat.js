@@ -158,7 +158,7 @@ export const GetFlat = () => {
                         <div class="benefit__title">
                             {kvTitle(flat.class)} {flat.info} м²
                         </div>
-                        <a class="benefit__btn" onClick={flatClick} id={flat["id"]} href="#">Записаться на просмотр</a>
+                        <a class="benefit__btn" onClick={flatClick} id={flat["id"]} href="#">Узнать стоимость</a>
                     </div>
                 </li>
                 )}

@@ -27,7 +27,7 @@ export const Presentation = () => {
                             <div className="form_item"><PhoneInput placeholder="Телефон" /></div>
                             <div className="form_item"><input type="text" name="email" className="ym-record-keys" placeholder="Почта" /></div>
                             <input className="text" type="hidden" value="Получить презентацию" />
-                            <div className="form_item"><button className="btn_main" celtype="getPresent" onClick={sendForm.sendForm}>Отправить</button></div>
+                            <div className="form_item"><button className="btn_main" celtype="getPresent" onClick={sendForm.sendForm}>Получить презентацию</button></div>
                         </div>
                     </form>
                 </div>

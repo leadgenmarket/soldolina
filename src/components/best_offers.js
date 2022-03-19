@@ -67,7 +67,7 @@ export const BestOffers = () => {
                                 </div>
                                 <a class="benefit__img" onClick={(e) => { e.preventDefault(); flatClick(flat) }} href="#"><img src={process.env.REACT_APP_BACKEND_URL + "/" + flat.img} /></a>
                                 <div class="benefit__price">от {flat.price} млн. ₽</div>
-                                <a class="benefit__btn" href="#" onClick={(e) => { e.preventDefault(); flatClick(flat) }}>Записаться на просмотр</a>
+                                <a class="benefit__btn" href="#" onClick={(e) => { e.preventDefault(); flatClick(flat) }}>Узнать стоимость</a>
                             </div>
                         </li>
                     )

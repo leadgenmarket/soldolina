@@ -59,7 +59,7 @@ export const Podbor = () => {
                     <div class="form_item"><PhoneInput placeholder="Телефон" /></div>
                     <div class="form_item"><input type="text" name="email" placeholder="Почта" /></div>
                     <input type="hidden" className="text" value={'Получить подборку свободных квартир.  Кол-во комнат: ' + getType(type) + '; Этажи ' + floor[0] + " - " + floor[1]} />
-                    <div class="form_item"><button class="btn_main" onClick={sendForm.sendForm}>Отправить</button></div>
+                    <div class="form_item"><button class="btn_main" onClick={sendForm.sendForm}>Получить подборку</button></div>
                 </div>
             </form>
         </div>
