@@ -34,9 +34,19 @@ export const GetFlat = () => {
         filterFlats(flats, area, type, flatsToShow + 3, floors)
     }
 
+    const checkFloorsInRange = (floors) => {
+		let flag = false
+		floors.forEach(fl=>{
+			if (fl >= floor[0] && fl <= floor[1]) {
+				flag = true
+			}
+		})
+		return flag
+	}
+
     const filterFlats = (flats, area, type, flatsToShow, floors) => {
         const newFlats = []
-        let flatsCh = flats.filter((flat) => parseFloat(flat.info) >= area[0] && parseFloat(flat.info) <= area[1] && (type == "all" || type == flat.class) && flat.floor[0] >= floors[0] && flat.floor[1] <= floors[1])
+        let flatsCh = flats.filter((flat) => flat.total_area >= area[0] && flat.total_area <= area[1] && (type == "all" || type == flat.rooms) ) //&& checkFloorsInRange(flat.floors)
         if (flatsCh.length <= flatsToShow) {
             setHideMore(true)
         } else {
@@ -52,23 +62,23 @@ export const GetFlat = () => {
 
     const kvTitleFull = (classKv) => {
         switch (classKv) {
-            case "0":
+            case 0:
                 return "Cтудия"
-            case "1":
+            case 1:
                 return "Однокомнатная"
-            case "2":
+            case 2:
                 return "Двухкомнатная"
-            case "3":
+            case 3:
                 return "Трехкомнатная"
         }
     }
 
     const flatClick = (e) => {
         e.preventDefault()
-        let id = parseInt(e.currentTarget.getAttribute('id'))
+        let id = e.currentTarget.getAttribute('id')
         let flat
         const headers = { 'Content-Type': 'application/json' }
-        fetch(process.env.REACT_APP_BACKEND_URL + "/flats_react.php?id=" + id, headers)
+        fetch(process.env.REACT_APP_BACKEND_URL + "/flats.php?ID=" + id, headers)
             .then(res => res.json())
             .then((result) => {
                 flat = result
@@ -79,33 +89,44 @@ export const GetFlat = () => {
                 });
                 document.querySelector('.pu_flat').style.display = "block"
                 document.querySelector('body').classList.add('overflow')
-                document.querySelector('.pu_flat_content__r img').setAttribute('src', process.env.REACT_APP_BACKEND_URL + "/" + flat.img)
-                document.querySelector('.pu_flat #sq_all').innerHTML = flat.info + " м²"
-                document.querySelector('.pu_flat #sq_zhil').innerHTML = flat.zhil + " м²"
-                document.querySelector('.pu_flat .tm b').innerHTML = flat.class == "0" ? "Квартира-студия" : kvTitleFull(flat.class) + " квартира"
-                document.querySelector('.pu_flat .text').value = 'Узнать стоимость ' + kvTitle(flat.class) + "; Общая площадь: " + flat.info + "; Жилая площадь: " + flat.zhil
+                document.querySelector('.pu_flat_content__r img').setAttribute('src', process.env.REACT_APP_PLANS_URL + flat.photo)
+                document.querySelector('.pu_flat #sq_all').innerHTML = flat.total_area + " м²"
+                document.querySelector('.pu_flat #sq_zhil').innerHTML = flat.living_area + " м²"
+                document.querySelector('.pu_flat .tm b').innerHTML = flat.class == "0" ? "Квартира-студия" : kvTitleFull(flat.rooms) + " квартира"
+                document.querySelector('.pu_flat .text').value = 'Узнать стоимость ' + kvTitle(flat.rooms) + "; Общая площадь: " + flat.total_area + "; Жилая площадь: " + flat.living_area
             })
     }
 
     const kvTitle = (classKv) => {
         switch (classKv) {
-            case "0":
+            case 0:
                 return "Квартира-студия"
-            case "1":
+            case 1:
                 return "1-k Квартира"
-            case "2":
+            case 2:
                 return "2-k Квартира"
-            case "3":
+            case 3:
                 return "3-k Квартира"
         }
     }
 
     useEffect(() => {
-        fetch(process.env.REACT_APP_BACKEND_URL + "/flats_react.php", {})
+        fetch(process.env.REACT_APP_BACKEND_URL + "/flats.php", {})
             .then(res => res.json())
             .then((result) => {
-                console.log(result)
-                setFlats(result)
+                let flats = []
+				result.map((flat) => {
+					let floors = []
+					if (flat.floors != "") {
+						let tmpFloor = flat.floors.split(',')
+						tmpFloor.forEach((fl)=>{
+							floors.push(parseInt(fl))
+						})
+					}
+					flat.floors = floors
+					flats.push(flat)
+				})
+				setFlats(flats)
                 filterFlats(result, area, type, flatsToShow, floors)
             })
     }, [])
@@ -154,11 +175,11 @@ export const GetFlat = () => {
             <ul class="benefit__list">
                 {filteredFlats.map((flat) => <li>
                     <div class="benefit__item">
-                        <a class="benefit__img" onClick={flatClick} id={flat["id"]} href="#"><img src={flat.img} /></a>
+                        <a class="benefit__img" onClick={flatClick} id={flat.ID} href="#"><img src={process.env.REACT_APP_PLANS_URL+ flat.photo} /></a>
                         <div class="benefit__title">
-                            {kvTitle(flat.class)} {flat.info} м²
+                            {kvTitle(flat.rooms)} {flat.total_area} м²
                         </div>
-                        <a class="benefit__btn" onClick={flatClick} id={flat["id"]} href="#">Узнать стоимость</a>
+                        <a class="benefit__btn" onClick={flatClick} id={flat.ID} href="#">Узнать стоимость</a>
                     </div>
                 </li>
                 )}
