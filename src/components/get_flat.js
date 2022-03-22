@@ -102,11 +102,11 @@ export const GetFlat = () => {
             case 0:
                 return "Квартира-студия"
             case 1:
-                return "1-k Квартира"
+                return "1-k квартира"
             case 2:
-                return "2-k Квартира"
+                return "2-k квартира"
             case 3:
-                return "3-k Квартира"
+                return "3-k квартира"
         }
     }
 

@@ -25,12 +25,12 @@ export const Contacts = () => {
                         Сб–Вс: 10:00 - 20:00<br />
                     </li>
                 </ul>
-                <div class="soc_list">
+                {/*<div class="soc_list">
                     <a href="#"><img src="img/soc_ico1.svg" /></a>
                     <a href="#"><img src="img/soc_ico2.svg" /></a>
                     <a href="#"><img src="img/soc_ico3.svg" /></a>
                     <a href="#"><img src="img/soc_ico4.svg" /></a>
-                </div>
+                </div>*/}
             </div>
             <div className="contact__r">
                 <div id="map">

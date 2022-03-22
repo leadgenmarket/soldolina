@@ -6,18 +6,13 @@ import "./css/slick-theme.min.css"
 export const Gallery = () => {
     const slider = useRef(null);
     const photos = [
-        "img/gallery_th_img1.jpg",
-        "img/gallery_th_img2.jpg",
-        "img/gallery_th_img3.jpg",
-        "img/gallery_th_img4.jpg",
-        "img/gallery_th_img5.jpg",
-        "img/gallery_th_img6.jpg",
-        "img/gallery_th_img7.jpg",
-        "img/gallery_th_img8.jpg",
-        "img/gallery_th_img9.jpg",
-        "img/gallery_th_img10.jpg",
-        "img/gallery_th_img11.jpg",
-        "img/gallery_th_img12.jpg",
+        "img/gallery1.jpg",
+        "img/gallery2.jpg",
+        "img/gallery3.jpg",
+        "img/gallery4.jpg",
+        "img/gallery5.jpg",
+        "img/gallery6.jpg",
+        "img/gallery7.jpg",
     ];
 
     var settings = {
