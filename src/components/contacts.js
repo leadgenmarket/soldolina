@@ -16,7 +16,7 @@ export const Contacts = () => {
                         Щелково,  Центральная ул. 71/1 <br />(дальний вход в магазин ДА)
                     </li>
                     <li>
-                        <a href="tel:+74951279553"><b>+7 495 127 95 53</b></a><br />
+                        <a href={"tel:" + phone.replaceAll(" ", "").replaceAll("-", "").replaceAll("(", "").replaceAll(")", "") + "\""}><b>{phone}</b></a><br />
                         <a href="#">info@sunny-park.ru</a>
                     </li>
                     <li>
