@@ -14,9 +14,9 @@ export const Locations = () => {
                 <div id="map1" style={{ width: "100%", height: "100%" }}>
                     <YMaps>
                         <div>
-                            <Map defaultState={{ center: [55.76043281902053, 37.635583022515924], zoom: 16.2, controls: [] }} style={{ width: "100%", height: "100%", position: "absolute" }}  >
+                            <Map defaultState={{ center: [55.934442, 38.020078], zoom: 15.2, controls: [] }} style={{ width: "100%", height: "100%", position: "absolute" }}  >
                                 <ZoomControl options={{ float: 'left' }} />
-                                <Placemark geometry={[55.760510100343694, 37.63663440608215]}
+                                <Placemark geometry={[55.934442, 38.027078]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -29,7 +29,7 @@ export const Locations = () => {
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
-                                <Placemark geometry={[55.76125554319915, 37.634536961000144]}
+                                <Placemark geometry={[55.937412, 38.034669]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -42,7 +42,7 @@ export const Locations = () => {
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
-                                <Placemark geometry={[55.760202937090135, 37.63479445306556]}
+                                <Placemark geometry={[55.931758, 38.005815]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -55,7 +55,7 @@ export const Locations = () => {
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
-                                <Placemark geometry={[55.75878126860425, 37.6348373684098]}
+                                <Placemark geometry={[55.929477, 38.004168]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -68,7 +68,7 @@ export const Locations = () => {
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
-                                <Placemark geometry={[55.75964637520166, 37.639440039079346]}
+                                <Placemark geometry={[55.930229, 38.016951]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -85,7 +85,7 @@ export const Locations = () => {
                         </div>
                     </YMaps>
                 </div>
-                <div class="location__wiev_plan">Смотреть все планировки</div>
+                {/*<div class="location__wiev_plan">Смотреть все планировки</div>*/}
             </div>
             <div class="location__map_info">
                 <p> В жилом комплексе будет построена новая школа, а пока строительство не завершено <b>застройщик оплачивает школьный автобус для детей</b>, проживающих в “Солнечной Долине”</p>

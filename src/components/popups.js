@@ -327,7 +327,7 @@ export const Popups = () => {
                             <input type="hidden" className="dop-info" data="Первоначальный взнос: " value={pervIpot} />
                             <input type="hidden" className="dop-info" data="Срок: " value={srokIpot} />
                             <input type="hidden" className="text" value='Получить расчет' />
-                            <div className="form_item form_item_100"><button onClick={sendForm.sendForm} className="btn_main">Отправить</button></div>
+                            <div className="form_item form_item_100"><button onClick={sendForm.sendForm} className="btn_main">Получить расчет</button></div>
                         </form>
                     </div>
 
@@ -358,7 +358,7 @@ export const Popups = () => {
                             <div className="form_item"><input type="text" className='name' placeholder="Имя" /></div>
                             <div className="form_item"><PhoneInput placeholder="Телефон" /></div>
                             <input type="hidden" className="text" value='Узнать стоимость квартиры' />
-                            <div className="form_item form_item_100"><button celtype="getBestOffer" onClick={sendForm.sendForm} className="btn_main">Отправить</button></div>
+                            <div className="form_item form_item_100"><button celtype="getBestOffer" onClick={sendForm.sendForm} className="btn_main">Узнать стоимость</button></div>
                         </form>
                     </div>
 

@@ -151,11 +151,11 @@ export const useSendForm = () => {
             document.querySelector('.pu_rgba').style.display = "block"
             document.querySelector('.pu_thx').style.display = "block"
             console.log(senddata)
-            /*fetch("fd_log/ajax.php", requestOptions)
+            fetch("fd_log/ajax.php", requestOptions)
                 .then(data => data.ok)
                 .then(response => {
                     showAlert(senddata, celtype)
-                });*/
+                });
         }
     }
     return { sendForm }
