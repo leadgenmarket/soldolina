@@ -51,7 +51,7 @@ export const Locations = () => {
                                         cursor: 'default',
                                         iconShadow: true,
                                         balloonclose: true,
-                                        iconImageHref: 'img/map_location_ico2.svg',
+                                        iconImageHref: 'img/map_location_ico4.svg',
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
@@ -77,7 +77,7 @@ export const Locations = () => {
                                         cursor: 'default',
                                         iconShadow: true,
                                         balloonclose: true,
-                                        iconImageHref: 'img/map_location_ico4.svg',
+                                        iconImageHref: 'img/map_location_ico2.svg',
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
