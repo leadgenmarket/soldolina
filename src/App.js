@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-// import "./css/style.css";
+import "./css/style.css";
 import { BlocksContext } from "./context/blocksContext"
 import { FlatsContext } from "./context/flatsContext"
 import { useBlocks } from "./hooks/blocks.hook"

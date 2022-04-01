@@ -24,9 +24,9 @@ export const Header = () => {
                     <div class="head_title">
                         Квартиры в новом <br />микрорайоне города <br />Щелково от 4 млн ₽
                     </div>
-                    <div class="head_map_info">
+                    {/* <div class="head_map_info">
                         <span>Детский сад во дворе</span>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </React.Fragment>

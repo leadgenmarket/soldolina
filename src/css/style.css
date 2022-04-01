@@ -1650,6 +1650,75 @@ input {
     display: none !important;
 }
 
+.genplan {
+    margin-top: 125px;
+    overflow: hidden;
+}
+
+.genplan__inner {
+    margin-top: 51px;
+    position: relative;
+}
+.genplan__inner_hover {
+    position: absolute;
+    width: 50px;
+    height: 46px;
+    margin-left: -25px;
+    margin-top: -23px;
+    z-index: 20;
+}
+
+    .genplan__inner_hover1 {
+        left: 88.5%;
+        top: 37.4%;
+    }
+
+    .genplan__inner_hover2 {
+        left: 50.1%;
+        top: 36.2%;
+    }
+
+    .genplan__inner_hover3 {
+        left: 68.3%;
+        top: 67.2%;
+    }
+
+    .genplan__inner_plashka {
+        position: absolute;
+        display: flex;
+        left: 90%;
+        margin-left: 6px;
+        top: 3px;
+        width: 88px;
+        height: 41px;
+        text-align: center;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+        -moz-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .genplan__inner_hover:hover .genplan__inner_plashka {
+        opacity: 1;
+        left: 100%;
+    }
+
+.genplan__inner img {
+    display: block;
+    width: 100%;
+    border-radius: 25px;
+}
+
 
 /* @height */
 @media screen and (max-height:  900px) {
@@ -1716,6 +1785,16 @@ input {
 }
 
 @media screen and (max-width: 1060px) {
+    .genplan__inner_hover1 .genplan__inner_plashka {
+        left: auto;
+        right: 90%;
+        margin-left: 0;
+        margin-right: 6px;
+    }
+        .genplan__inner_hover1:hover .genplan__inner_plashka {
+            left: auto;
+            right: 100%;
+        }
     .head_map_info {
         font-size: 16px;
         left: 40vw;
@@ -1831,6 +1910,12 @@ input {
 }
 
 @media screen and (max-width: 840px) {
+    .genplan {
+        margin-top: 60px;
+    }
+    .genplan__inner {
+        margin-top: 32px;
+    }
     .closeform {
         right: 24px;
         top: 24px;
@@ -1968,6 +2053,13 @@ input {
 }
 
 @media screen and (max-width: 660px) {
+    .genplan__inner_plashka {
+        width: 80px;
+        font-style: 15px;
+        height: 34px;
+        top: 50%;
+        margin-top: -17px;
+    }
     .flat__nav {
         display: block;
     }
@@ -2110,6 +2202,13 @@ input {
 }
 
 @media screen and (max-width: 480px) {
+    .genplan__inner img {
+        border-radius: 0;
+    }
+    .genplan__inner {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
     .pu_flat_char {
         padding-top: 0;
     }
@@ -2306,6 +2405,22 @@ input {
 }
 
 @media screen and (max-width: 420px) {
+    .genplan__inner_hover3 .genplan__inner_plashka {
+        left: auto;
+        right: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+        .genplan__inner_hover3:hover .genplan__inner_plashka {
+            left: auto;
+            right: 100%;
+        }
+        .genplan__inner_hover1 .genplan__inner_plashka {
+            margin-right: 0;
+        }
+        .genplan__inner_hover2 .genplan__inner_plashka {
+            margin-left: 0;
+        }
     .deal__img {
         margin-left: 0;
         margin-bottom: 0;
@@ -2421,6 +2536,9 @@ input {
 }
 
 @media screen and (max-width: 360px) {
+    .genplan__inner {
+        margin-top: 22px;
+    }
     .ipoteka__list > li {
         font-size: 18px;
     }
