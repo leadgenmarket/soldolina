@@ -2,6 +2,147 @@
     color: red !important;
     border-color: red !important;
 }
+/* new genplan */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+}
+
+.genplan {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.genplan__inner {
+    position: relative;
+    min-width: 1170px;
+    min-height: 694px;
+}
+
+.genplan__image img {
+    max-width: 100%;
+    height: 694px;
+    object-fit: cover;
+}
+
+.genplan__block {
+    background-color: #95cb35;
+    width: 178px;
+    height: 59px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 7px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 1;
+}
+
+.genplan__block.aos-init.aos-animate:hover {
+    opacity: .5;
+}
+
+.genplan__block-text span {
+    font-weight: 900;
+}
+
+.green-block-1 {
+    bottom: 66px;
+    left: 353px;
+}
+
+.green-block-2 {
+    bottom: 225px;
+    left: 125px;
+}
+
+.green-block-3 {
+    bottom: 392px;
+    left: 330px;
+}
+
+.green-block-4 {
+    bottom: 323px;
+    left: 530px;
+}
+
+.green-block-5 {
+    bottom: 118px;
+    left: 710px;
+}
+
+.green-block-6 {
+    top: 85px;
+    right: 290px;
+}
+
+.green-block-7 {
+    top: 13px;
+    right: 125px;
+}
+
+.green-block-8 {
+    top: 80px;
+    right: 42px;
+}
+
+.green-block-9 {
+    top: 149px;
+    right: 8px;
+}
+
+.genplan__icon {
+    width: 50px;
+    height: 46px;
+    position: absolute;
+}
+
+.genplan__icon-1 {
+    top: 230px;
+    left: 560px;
+}
+
+.genplan__icon-2 {
+    top: 420px;
+    left: 772px;
+}
+
+.genplan__icon-3 {
+    bottom: 413px;
+    right: 108px;
+}
+
+.genplan__icon-plashka {
+    position: absolute;
+    top: 2px;
+    left: 50px;
+    width: 88px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    border-radius: 5px;
+    padding-top: 8px;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.genplan__icon:hover .genplan__icon-plashka {
+    opacity: 1;
+    transform: translateX(8px);
+}
+
 /*fonts*/
 @font-face {
     font-family: 'Gilroy';
