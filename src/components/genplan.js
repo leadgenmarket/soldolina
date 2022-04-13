@@ -27,6 +27,11 @@ export const Genplans = () => {
         });
     },[])
     return (<div className="genplan">
+            <div className="wmain">
+                <div className="tm tt">
+                    Генплан комплекса
+                </div>
+            </div>
         <div className="genplan__inner">
             <div className="genplan__image">
                 <img src="img/genplan_img.jpg" alt="Генплан" />
