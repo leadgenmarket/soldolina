@@ -305,7 +305,19 @@ input {
     font-size: 82px;
     font-size: 4.26vw;
     line-height: 110%;
-    color: #FFF;
+    color: #000000;
+}
+
+.head_price {
+    display: inline-flex;
+    background: #95CB35;
+    border-radius: 15px;
+    padding: 9px 30px 9px 30px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 110%;
+    margin-top: 35px;
 }
 
 .head_map_info {
@@ -2343,6 +2355,13 @@ input {
 }
 
 @media screen and (max-width: 480px) {
+    .head_title {
+        color: #fff;
+    }
+    .head_price {
+        font-size: 30px;
+        margin-top: 26px;
+    }
     .genplan__inner img {
         border-radius: 0;
     }
