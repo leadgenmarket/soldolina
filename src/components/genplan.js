@@ -105,9 +105,9 @@ export const Genplans = () => {
             </div>
             <div className="genplan__icon genplan__icon-3">
                 <div className="genplan__icon-img">
-                    <img src="img/garden.svg" alt="Сад" />
+                    <img src="img/map_location_ico1.svg" alt="Сад" />
                 </div>
-                <div className="genplan__icon-plashka">Сад</div>
+                <div className="genplan__icon-plashka">Детский сад</div>
             </div>
         </div>
     </div>

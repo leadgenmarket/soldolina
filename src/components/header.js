@@ -25,7 +25,11 @@ export const Header = () => {
                         Квартиры в новом <br />микрорайоне города <br />Щелково от 4 млн ₽
                     </div>
                     <div class="head_price">
-                    от 4 млн ₽
+                        Ипотека для всех 8%
+                    </div>
+                    <div></div>
+                    <div class="head_price">
+                        Семейная ипотека от 2,5%
                     </div>
                     {/* <div class="head_map_info">
                         <span>Детский сад во дворе</span>

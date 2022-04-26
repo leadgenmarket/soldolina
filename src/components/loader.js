@@ -7,7 +7,7 @@ import { Invest } from "./invest";
 import { Graph } from "./graph";
 import { Presentation } from "./presentation";
 import { BestOffers } from "./best_offers";
-import { Locations } from "./location";
+// import { Locations } from "./location";
 import { GetFlat } from "./get_flat";
 import { GetThere } from "./get_there";
 import { Podbor } from "./podbor";

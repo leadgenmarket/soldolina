@@ -27,15 +27,16 @@ export const Podbor = () => {
     return (
         <div class="get_present get_flat">
             <div class="tm tt">
-                <b>Получите подборку</b> свободных квартир с планировками и ценами
+                <b>Получите подборку</b> свободных квартир
             </div>
             <form class="form_style">
-                <div class="form_title">Отправляем в течении 30 минут</div>
+                {/* <div class="form_title">Отправляем в течении 30 минут</div> */}
                 <div class="flat__nav">
                     <div class="flat__nav_item">
-                        <div class="flat__nav_name">Комнаты</div>
+                        <div class="flat__nav_name">Количество комнат</div>
                         <div class="flat__nav_btn">
                             <div className={type == "all" ? "act" : ""} onClick={() => typeClick("all")}>Все</div>
+                            <div className={type == "0" ? "act" : ""} onClick={() => typeClick("0")}>Студии</div>
                             <div className={type == "1" ? "act" : ""} onClick={() => typeClick("1")}>1</div>
                             <div className={type == "2" ? "act" : ""} onClick={() => typeClick("2")}>2</div>
                             <div className={type == "3" ? "act" : ""} onClick={() => typeClick("3")}>3</div>
@@ -57,7 +58,7 @@ export const Podbor = () => {
                 </div>
                 <div class="form_content">
                     <div class="form_item"><PhoneInput placeholder="Телефон" /></div>
-                    <div class="form_item"><input type="text" name="email" placeholder="Почта" /></div>
+                    <div class="form_item"><input type="text" className='name' placeholder="Имя" /></div>
                     <input type="hidden" className="text" value={'Получить подборку свободных квартир.  Кол-во комнат: ' + getType(type) + '; Этажи ' + floor[0] + " - " + floor[1]} />
                     <div class="form_item"><button class="btn_main" onClick={sendForm.sendForm}>Получить подборку</button></div>
                 </div>

@@ -21,7 +21,7 @@ export const Hod_str = () => {
     var settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 300,
         variableWidth: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -133,7 +133,7 @@ export const Hod_str = () => {
         <section className="deal">
             <div className="tm tt"><b>Надежная сделка</b></div>
             <div className="tm_dop">
-                Жилой комплекс строится по ФЗ 214 с использованием проектного финансирования <br />и эскроу счетов. Со всей документацией по объекту вы можете ознакомиться на <br />сайте Единой информационной системы жилищного строительства наш.дом.рф
+                Жилой комплекс строится по ФЗ 214 с использованием проектного финансирования <br />и эскроу счетов. Со всей документацией по объекту вы можете ознакомиться на <br />сайте Единой информационной системы жилищного строительства <a target="_blank" href="https://xn--80az8a.xn--d1aqf.xn--p1ai/">наш.дом.рф</a>
             </div>
             <div className="deal__nav">
                 <ul className="deal__nav_list">

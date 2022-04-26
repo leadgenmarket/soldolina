@@ -11,17 +11,17 @@ export const Invest = () => {
                     </div>
                     <div class="invest_item">
                         <img src="img/invest_img2.jpg" />
-                        <div class="invest_item__name">Качественные современные лифты</div>
+                        <div class="invest_item__name">Видеонаблюдение на территории</div>
                     </div>
                     <div class="invest_item">
                         <img src="img/invest_img3.jpg" />
-                        <div class="invest_item__name">Дизайнерские входные группы</div>
+                        <div class="invest_item__name">Расположен в зеленой зоне</div>
                     </div>
                 </li>
                 <li>
                     <div class="invest_item">
                         <img src="img/invest_img4.jpg" />
-                        <div class="invest_item__name">Благоустроенные зоны отдыха</div>
+                        <div class="invest_item__name">Новый современный микрорайон</div>
                     </div>
                     <div class="invest_item">
                         <img src="img/invest_img5.jpg" />
@@ -29,13 +29,13 @@ export const Invest = () => {
                     </div>
                     <div class="invest_item">
                         <img src="img/invest_img6.jpg" />
-                        <div class="invest_item__name">Продуманные эргономичные планировки</div>
+                        <div class="invest_item__name">Всего 3-5 квартир на этаже</div>
                     </div>
                 </li>
                 <li>
                     <div class="invest_item">
                         <img src="img/invest_img7.jpg" />
-                        <div class="invest_item__name">Продуманная современная инженерия</div>
+                        <div class="invest_item__name">Новая современная инженерия</div>
                     </div>
                     <div class="invest_item">
                         <img src="img/invest_img8.jpg" />
@@ -43,7 +43,7 @@ export const Invest = () => {
                     </div>
                     <div class="invest_item">
                         <img src="img/invest_img9.jpg" />
-                        <div class="invest_item__name">Независимое отопление</div>
+                        <div class="invest_item__name">Прекрасная транспортная доступность</div>
                     </div>
                 </li>
             </ul>

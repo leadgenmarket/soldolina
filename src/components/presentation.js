@@ -8,7 +8,7 @@ import { GetFlat } from "./get_flat";
 import { GetThere } from "./get_there";
 import { Hod_str } from "./hod_str";
 import { Ipoteka } from "./ipoteka";
-import { Locations } from "./location";
+// import { Locations } from "./location";
 import { Genplans } from "./genplan";
 import { PhoneInput } from "./phone_input"
 import { Podbor } from "./podbor";
@@ -34,7 +34,7 @@ export const Presentation = () => {
                 </div>
                 <BestOffers />
                 <Genplans />
-                <Locations />
+                {/* <Locations /> */}
                 <GetFlat />
                 <GetThere />,
                 <Podbor />,

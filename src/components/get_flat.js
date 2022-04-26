@@ -100,7 +100,7 @@ export const GetFlat = () => {
     const kvTitle = (classKv) => {
         switch (classKv) {
             case 0:
-                return "Квартира-студия"
+                return "Студии"
             case 1:
                 return "1-k квартира"
             case 2:
@@ -137,9 +137,10 @@ export const GetFlat = () => {
             </div>
             <div class="flat__nav">
                 <div class="flat__nav_item">
-                    <div class="flat__nav_name">Комнаты</div>
+                    <div class="flat__nav_name">Количество комнат</div>
                     <div class="flat__nav_btn">
                         <div className={type == "all" ? "act" : ""} onClick={() => typeClick("all")}>Все</div>
+                        <div className={type == "0" ? "act" : ""} onClick={() => typeClick("0")}>Студии</div>
                         <div className={type == "1" ? "act" : ""} onClick={() => typeClick("1")}>1</div>
                         <div className={type == "2" ? "act" : ""} onClick={() => typeClick("2")}>2</div>
                         <div className={type == "3" ? "act" : ""} onClick={() => typeClick("3")}>3</div>
@@ -152,8 +153,8 @@ export const GetFlat = () => {
                         //defaultValue={floor}
                         value={floors}
                         step={1}
-                        min={1}
-                        max={18}
+                        min={2}
+                        max={17}
                         onChange={handleChange}
                         valueLabelDisplay="on"
                     />
@@ -165,8 +166,8 @@ export const GetFlat = () => {
                         //defaultValue={floor}
                         value={area}
                         step={1}
-                        min={1}
-                        max={160}
+                        min={18}
+                        max={86}
                         onChange={handleChangeArea}
                         valueLabelDisplay="on"
                     />
