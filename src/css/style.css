@@ -699,6 +699,17 @@ input {
         margin-top: 3px;
     }
 
+.benefit__list_info {
+    font-style: 18px;
+    line-height: 120%;
+    margin-top: 20px;
+    color: #1C2122;
+}
+
+    .benefit__list_info span {
+        display: block;
+    }
+
 .benefit__list {
     display: flex;
     margin: 0;
