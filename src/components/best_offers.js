@@ -78,7 +78,7 @@ export const BestOffers = () => {
                 })}
             </ul>
             <div class="benefit__list_info">
-                <span>* - при первом взносе 15% с ипотекой 8% для всх</span>
+                <span>* - при первом взносе 15% с ипотекой 8% для всех</span>
                 <span>** - при первом взносе 15% с семейной ипотекой 15%</span>
             </div>
         </section>
