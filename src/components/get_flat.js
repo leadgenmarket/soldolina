@@ -3,7 +3,7 @@ import Slider from '@material-ui/core/Slider';
 
 export const GetFlat = () => {
     const [floors, setFloor] = useState([3, 15])
-    const [area, setArea] = useState([20, 140])
+    const [area, setArea] = useState([18, 140])
     const [type, setType] = useState("all")
     const [flats, setFlats] = useState([])
     const [filteredFlats, setFilteredFlats] = useState([])
