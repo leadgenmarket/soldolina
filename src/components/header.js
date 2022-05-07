@@ -22,10 +22,10 @@ export const Header = () => {
                 <img class="header_bg_mobile" src="img/header_bg_mobile.jpg" />
                 <div class="header_content">
                     <div class="head_title">
-                        Квартиры в новом <br />микрорайоне города <br />Щелково от 4 млн ₽
+                        Квартиры в новом <br />микрорайоне города <br />Щелково от 3,6 млн ₽
                     </div>
                     <div class="head_price">
-                        Ипотека для всех 8%
+                        Ипотека для всех 4,99%
                     </div>
                     <div></div>
                     <div class="head_price">

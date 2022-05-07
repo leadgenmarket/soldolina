@@ -22,6 +22,7 @@ export const Loader = () => {
     const blocksImports = [
         <Menu />,
         <Header />,
+        <BestOffers />,
         <Invest />,
         <Graph />,
         <Presentation />,

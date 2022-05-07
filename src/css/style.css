@@ -288,11 +288,22 @@ input {
 
 .header {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .header_bg {
     display: block;
     width: 100%;
+}
+
+.header_bg, .header_bg_mobile {
+    object-fit: cover;
+}
+
+.header, .header_bg, .header_bg_mobile {
+    min-height: 470px;
+    height: calc(100vh - 78px);
 }
 
 .header_content {
@@ -325,7 +336,7 @@ input {
     padding: 9px 30px 9px 30px;
     color: #fff;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 110%;
     margin-top: 35px;
 }
@@ -402,7 +413,7 @@ input {
     align-items: center;
     position: relative;
 }
-.logo:before {
+/* .logo:before {
     content: "";
     display: block;
     position: absolute;
@@ -411,7 +422,7 @@ input {
     background: #fff;
     left: 0;
     bottom: 0;
-}
+} */
 
 .hl_nav {
     display: flex;
@@ -439,7 +450,7 @@ input {
     }
 
     .hl_nav a:hover {
-        opacity: 0.8;
+        opacity: 0.4;
     }
 
 .hl_phone {
@@ -463,11 +474,17 @@ input {
     font-size: 60px;
     line-height: 110%;
     color: #000000;
+    position: relative;
+    z-index: 20;
 }
 
     .tm b {
         font-weight: bold;
     }
+
+.get_present {
+    position: relative;
+}
 
 .get_present .tm {
     text-transform: uppercase;
@@ -480,6 +497,7 @@ input {
     list-style: none;
     margin-left: -30px;
     margin-top: 55px;
+    max-width: 700px;
 }
 
     .invest__list > li {
@@ -503,6 +521,10 @@ input {
     font-size: 22px;
     line-height: 27px;
     color: #000000;
+
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 17px;
 }
 
 .invest_item + .invest_item {
@@ -579,6 +601,16 @@ input {
     padding-top: 75px;
     padding-bottom: 24px;
     background: #F2F3F4;
+    overflow: hidden;
+}
+.get_present__decor {
+    position: absolute;
+    right: -92px;
+    top: 100%;
+    margin-top: -159px;
+}
+.get_present__decor img {
+    display: block;
 }
 
 .get_present {
@@ -594,6 +626,8 @@ input {
 
 .get_present .form_style {
     margin-top: 17px;
+    position: relative;
+    z-index: 20;
 }
 
 .form_title {
@@ -684,6 +718,7 @@ input {
 
 .benefit {
     margin-top: 125px;
+    padding-bottom: 100px;
 }
 
 .benefit__ipoteka {
@@ -700,9 +735,9 @@ input {
     }
 
 .benefit__list_info {
-    font-style: 18px;
+    font-size: 22px;
     line-height: 120%;
-    margin-top: 20px;
+    margin-top: 50px;
     color: #1C2122;
 }
 
@@ -777,7 +812,7 @@ input {
 .benefit__price {
     margin-top: 25px;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 29px;
     color: #1C2122;
 }
@@ -1151,9 +1186,11 @@ input {
         margin-bottom: 25px;
         margin-left: 10px;
         height: 70px;
+        display: flex;
+        align-items: center;
         font-weight: bold;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 37px;
+        padding-right: 37px;
         background: #FFF;
         display: flex;
         -webkit-justify-content: center;
@@ -1174,9 +1211,26 @@ input {
                 transition: 0.3s;
     }
 
+    .ipoteka__list > li i {
+        width: 45px;
+        min-width: 45px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-right: 17px;
+    }
+    .ipoteka__list > li i img, .ipoteka__list > li i svg {
+        display: block;
+        max-width: 100%;
+    }
+
         .ipoteka__list > li:hover {
             color: #FFF;
             background: var(--c2);
+        }
+
+        .ipoteka__list > li:hover svg path {
+            fill: #fff;
         }
 
 .gallery {
@@ -1965,6 +2019,11 @@ input {
 /* @height  end*/
 
 /*@media*/
+@media screen and (max-width: 1440px) {
+    .head_price {
+        font-size: 36px;
+    }
+} 
 @media screen and (max-width: 1260px) {
     .wmain {
         width: 100%;
@@ -1982,6 +2041,9 @@ input {
 }
 
 @media screen and (max-width: 1200px) {
+    .header, .header_bg, .header_bg_mobile {
+        height: calc(100vh - 48px);
+    }
     .plr, .hl_top {
         padding-left: 40px;
         padding-right: 40px;
@@ -2008,7 +2070,13 @@ input {
     }
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1060px) { 
+    .head_price {
+        font-size: 22px;
+    }
+    .header, .header_bg, .header_bg_mobile {
+        min-height: 370px;
+    }
     .genplan__inner_hover1 .genplan__inner_plashka {
         left: auto;
         right: 90%;
@@ -2450,6 +2518,9 @@ input {
     .head_title {
         color: #fff;
     }
+    .header, .header_bg, .header_bg_mobile {
+        min-height: 500px;
+    }
     .head_price {
         font-size: 23px;
         margin-top: 26px;
@@ -2657,6 +2728,33 @@ input {
 }
 
 @media screen and (max-width: 420px) {
+    .benefit {
+        padding-bottom: 80px;
+    }
+    .benefit__ipoteka span {
+        font-size: 18px;
+    }
+    .benefit__ipoteka {
+        margin-top: 8px;
+    }
+    .benefit__list_info {
+        font-size: 19px;
+    }
+    .benefit__list_info {
+        margin-top: 36px;
+    }
+    .benefit__price  {
+        font-size: 24px;
+        line-height: 120%;
+    }
+    .get_present__decor img {
+        width: 100%;
+    }
+    .get_present__decor {
+        width: 200px;
+        right: -46px;
+        margin-top: -80px;
+    }
     .get_present .flat__nav_btn div {
         padding-left: 11px;
         padding-right: 11px;
@@ -2704,6 +2802,15 @@ input {
 }
 
 @media screen and (max-width: 380px) {
+    .ipoteka__list > li i {
+        width: 30px;
+        max-width: 30px;
+        min-width: 30px;
+        margin-right: 8px;
+    }
+    .ipoteka__list > li i img, .ipoteka__list > li i svg {
+        max-height: 30px;
+    }
     .deal__nav_list + .deal__nav_list {
         margin-top: 12px;
     }
@@ -2734,10 +2841,10 @@ input {
     }
     .ipoteka__list > li {
         height: 60px;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 25px;
-        padding-left: 31px;
-        padding-right: 31px;
+        padding-left: 25px;
+        padding-right: 25px;
         margin-bottom: 20px;
     }
     .benefit__title {
@@ -2792,6 +2899,9 @@ input {
 }
 
 @media screen and (max-width: 360px) {
+    .get_present__decor {
+        margin-top: -120px;
+    }
     .head_price {
         font-size: 18px;
     }

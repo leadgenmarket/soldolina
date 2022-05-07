@@ -55,31 +55,33 @@ export const BestOffers = () => {
 
 
     return (
-        <section class="benefit">
-            <div class="tm tt">Самые <b>выгодные</b> <br /><b>предложения</b> недели</div>
-            <ul class="benefit__list">
-                {flats.map((flat) => {
-                    return (
-                        <li>
-                            <div class="benefit__item">
-                                <div class="benefit__title">
-                                    {kvTitle(flat.class)} {flat.info} м²
+        <section class="benefit plr">
+            <div class="wmain">
+                <div class="tm tt">Самые <b>выгодные</b> <br /><b>предложения</b> в городе</div>
+                <ul class="benefit__list">
+                    {flats.map((flat) => {
+                        return (
+                            <li>
+                                <div class="benefit__item">
+                                    <div class="benefit__title">
+                                        {kvTitle(flat.class)} {flat.info} м²
+                                    </div>
+                                    <a class="benefit__img" onClick={(e) => { e.preventDefault(); flatClick(flat) }} href="#"><img src={process.env.REACT_APP_BACKEND_URL + "/" + flat.img} /></a>
+                                    <div class="benefit__price">{flat.price} млн. ₽</div>
+                                    {/* <a class="benefit__btn" href="#" onClick={(e) => { e.preventDefault(); flatClick(flat) }}>Узнать стоимость</a> */}
+                                    <div class="benefit__ipoteka">
+                                        <span>{flat.ipoteka1}</span>
+                                        {/* <span>{flat.ipoteka2}</span> */}
+                                    </div>
                                 </div>
-                                <a class="benefit__img" onClick={(e) => { e.preventDefault(); flatClick(flat) }} href="#"><img src={process.env.REACT_APP_BACKEND_URL + "/" + flat.img} /></a>
-                                <div class="benefit__price">от {flat.price} млн. ₽</div>
-                                {/* <a class="benefit__btn" href="#" onClick={(e) => { e.preventDefault(); flatClick(flat) }}>Узнать стоимость</a> */}
-                                <div class="benefit__ipoteka">
-                                    <span>{flat.ipoteka1}</span>
-                                    <span>{flat.ipoteka2}</span>
-                                </div>
-                            </div>
-                        </li>
-                    )
-                })}
-            </ul>
-            <div class="benefit__list_info">
-                <span>* - при первом взносе 15% с ипотекой 8% для всех</span>
-                <span>** - при первом взносе 15% с семейной ипотекой 15%</span>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <div class="benefit__list_info">
+                    <span>* - при первом взносе 20% с ипотекой <b>4,99% для всех</b></span>
+                    {/* <span>** - при первом взносе 20% с семейной ипотекой 15%</span> */}
+                </div>
             </div>
         </section>
     )

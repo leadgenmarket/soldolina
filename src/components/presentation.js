@@ -31,8 +31,10 @@ export const Presentation = () => {
                             <div className="form_item"><button className="btn_main" celtype="getPresent" onClick={sendForm.sendForm}>Получить презентацию</button></div>
                         </div>
                     </form>
+                    <div className="get_present__decor">
+                        <img src="img/present_form_decor.png" />
+                    </div>
                 </div>
-                <BestOffers />
                 <Genplans />
                 {/* <Locations /> */}
                 <GetFlat />
