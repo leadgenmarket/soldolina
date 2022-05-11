@@ -63,6 +63,7 @@ export const Podbor = () => {
                     <div class="form_item"><button class="btn_main" onClick={sendForm.sendForm}>Получить подборку</button></div>
                 </div>
             </form>
+            <div class="get_present__decor"><img src="img/get_present_img.png" /></div>
         </div>
     )
 }

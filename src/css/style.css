@@ -1176,7 +1176,7 @@ input {
     display: flex;
     margin-left: -10px;
     margin-bottom: -25px;
-    max-width: 790px;
+    max-width: 1030px;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -1185,12 +1185,13 @@ input {
     .ipoteka__list > li {
         margin-bottom: 25px;
         margin-left: 10px;
-        height: 70px;
+        height: 80px;
         display: flex;
         align-items: center;
         font-weight: bold;
-        padding-left: 37px;
-        padding-right: 37px;
+        font-size: 26px;
+        padding-left: 44px;
+        padding-right: 44px;
         background: #FFF;
         display: flex;
         -webkit-justify-content: center;
@@ -2392,6 +2393,12 @@ input {
 }
 
 @media screen and (max-width: 580px) {
+    .ipoteka__list > li {
+        font-size: 20px;
+        height: 70px;
+        padding-left: 34px;
+        padding-right: 34px;
+    }
     .head_title {
         font-size: 36px;
     }
