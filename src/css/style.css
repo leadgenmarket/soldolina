@@ -51,53 +51,57 @@ body {
     opacity: .5;
 }
 
+.genplan__block-text {
+    font-weight: 600;
+}
+
 .genplan__block-text span {
-    font-weight: 900;
+   
 }
 
 .green-block-1 {
-    bottom: 66px;
-    left: 353px;
+    bottom: 126px;
+    left: 233px;
 }
 
 .green-block-2 {
     bottom: 225px;
-    left: 125px;
+    left: 35px;
 }
 
 .green-block-3 {
-    bottom: 392px;
-    left: 330px;
+    bottom: 361px;
+    left: 180px;
 }
 
 .green-block-4 {
-    bottom: 323px;
-    left: 530px;
+    bottom: 283px;
+    left: 390px;
 }
 
 .green-block-5 {
-    bottom: 118px;
-    left: 710px;
+    bottom: 100px;
+    left: 560px;
 }
 
 .green-block-6 {
-    top: 85px;
-    left: 701px;
+    top: 155px;
+    left: 591px;
 }
 
 .green-block-7 {
     top: 13px;
-    left: 867px;
+    left: 757px;
 }
 
 .green-block-8 {
-    top: 80px;
-    left: 950px;
+    top: 82px;
+    left: 830px;
 }
 
 .green-block-9 {
-    top: 149px;
-    left: 980px;
+    top: 153px;
+    left: 990px;
 }
 
 .genplan__icon {
@@ -107,18 +111,18 @@ body {
 }
 
 .genplan__icon-1 {
-    top: 230px;
-    left: 560px;
+    top: 260px;
+    left: 390px;
 }
 
 .genplan__icon-2 {
-    top: 420px;
-    left: 772px;
+    top: 440px;
+    left: 642px;
 }
 
 .genplan__icon-3 {
-    bottom: 424px;
-    left: 1074px;
+    bottom: 415px;
+    left: 894px;
 }
 
 .genplan__icon-3 .genplan__icon-plashka {
