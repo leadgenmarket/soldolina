@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import Slider from "react-slick"
 import "./css/slick.min.css"
 import "./css/slick-theme.min.css"
+import { LightgalleryProvider, LightgalleryItem, useLightgallery } from "react-lightgallery";
+import "lightgallery.js/dist/css/lightgallery.css";
 
 
 
@@ -147,13 +149,17 @@ export const Hod_str = () => {
                     })}
                 </ul>
             </div>
-            <Slider ref={slider} className="deal__img" {...settings}>
-                {photos ? photos.map((photo) => {
-                    return <a href="#">
-                        <img src={process.env.REACT_APP_BACKEND_URL + "/" + photo} />
-                    </a>
-                }) : ""}
-            </Slider>
+            <LightgalleryProvider style={{ display: "none" }}>
+                <Slider ref={slider} className="deal__img" {...settings}>
+                    {photos ? photos.map((photo) => {
+                        return <a href="#">
+                            <LightgalleryItem key={photo} src={process.env.REACT_APP_BACKEND_URL + "/" + photo.replace('m.jpg', '.jpg')} thumb={process.env.REACT_APP_BACKEND_URL + "/" + photo}> 
+                                <img src={process.env.REACT_APP_BACKEND_URL + "/" + photo} />
+                            </LightgalleryItem>
+                        </a>
+                    }) : ""}
+                </Slider>
+            </LightgalleryProvider>
             {
                 /*
                 Стрелки для слайдера

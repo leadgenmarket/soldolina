@@ -7,15 +7,6 @@ import { Invest } from "./invest";
 import { Graph } from "./graph";
 import { Presentation } from "./presentation";
 import { BestOffers } from "./best_offers";
-// import { Locations } from "./location";
-import { GetFlat } from "./get_flat";
-import { GetThere } from "./get_there";
-import { Podbor } from "./podbor";
-import { Ipoteka } from "./ipoteka";
-import { Gallery } from "./gallery";
-import { Hod_str } from "./hod_str";
-import { Contacts } from "./contacts";
-import { Footer } from "./footer";
 
 export const Loader = () => {
 
