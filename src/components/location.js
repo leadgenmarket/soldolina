@@ -3,14 +3,14 @@ import { YMaps, Map, ZoomControl, Placemark } from 'react-yandex-maps';
 
 export const Locations = () => {
     return (
-        <div class="location">
-            <div id="page3" class="tm tt"><b>Уникальное расположение</b></div>
-            <div class="location__time">
+        <div className="location">
+            <div id="page3" className="tm tt"><b>Уникальное расположение</b></div>
+            <div className="location__time">
                 <span><img src="img/location_ico.svg" /><div><b>1 минута </b>пешком до детского сада</div></span>
                 <span><img src="img/location_ico.svg" /><div><b>5 минут </b>пешком до лесопарковой зоны</div></span>
                 <span><img src="img/location_ico.svg" /><div><b>15 минут </b>пешком до ТЦ “Глобус” и “Касторамы”</div></span>
             </div>
-            <div class="location__map">
+            <div className="location__map">
                 <div id="map1" style={{ width: "100%", height: "100%" }}>
                     <YMaps>
                         <div>
@@ -85,9 +85,9 @@ export const Locations = () => {
                         </div>
                     </YMaps>
                 </div>
-                {/*<div class="location__wiev_plan">Смотреть все планировки</div>*/}
+                {/*<div className="location__wiev_plan">Смотреть все планировки</div>*/}
             </div>
-            <div class="location__map_info">
+            <div className="location__map_info">
                 <p> В жилом комплексе будет построена новая школа, а пока строительство не завершено <b>застройщик оплачивает школьный автобус для детей</b>, проживающих в “Солнечной Долине”</p>
                 <p>В районе жилого комплекса будет построен новый торговый центр с ресторанами и кинотеатром.</p>
             </div>

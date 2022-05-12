@@ -47,7 +47,7 @@ export const Menu = () => {
             <div class="hl_nav">
                 <a href="ipoteka" onClick={clickMenu}>Ипотека</a>
                 <a href="flat" onClick={clickMenu}>Планировки и цены</a>
-                <a href="location__time" onClick={clickMenu}>Инфраструктура</a>
+                <a href="invest" onClick={clickMenu}>Инфраструктура</a>
                 <a href="contact" onClick={clickMenu}>Контакты</a>
             </div>
             <a class="hl_phone roistat-phone" href="tel:84959880202">8 495 988 02 02</a>

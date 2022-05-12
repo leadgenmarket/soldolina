@@ -21,17 +21,9 @@ export const Popups = () => {
     const blocks = useContext(BlocksContext)
     const [floor, setFloor] = useState(5);
     const [srokIpot, setSrokIpot] = useState("")
-    const [pervSrok, setPervSrok] = useState("")
     const [pervIpot, setPervIpot] = useState("")
-    const [pervRassr, setPervRassr] = useState("")
-    const [parking, setParking] = useState();
-    const [parkingCounter, setParkingCounter] = useState(1)
-    const [kellerCounter, setKellerCounter] = useState(1)
-    const [questionText, setQuestionText] = useState("")
-    const [keller, setKeller] = useState();
     const [time, setTime] = useState();
-    const floorSelector = useRef(null);
-    const close = (e) => {
+    const closeEvnt = (e) => {
         e.preventDefault()
         if (e.currentTarget.classList.contains("return")) {
             document.querySelector('.pu_liter').style.display = "block"
@@ -39,7 +31,7 @@ export const Popups = () => {
             e.currentTarget.classList.remove("return")
         } else {
             document.querySelector('body').classList.remove('overflow')
-            document.querySelector('.pu_rgba').style.display = "none"
+            document.querySelector(".pu_rgba").style.display = "none";
             document.querySelectorAll('.pu_inner').forEach(el => {
                 el.style.display = "none"
             });
@@ -66,22 +58,6 @@ export const Popups = () => {
         }
         return false;
     }
-
-    var settingsKeller = {
-        infinite: false,
-        beforeChange: (current, next) => {
-            setKellerCounter(next + 1)
-        }
-        // asNavFor
-    };
-
-    var settingsParking = {
-        infinite: false,
-        beforeChange: (current, next) => {
-            setParkingCounter(next + 1)
-        }
-        // asNavFor
-    };
 
     const clickMenu = (e) => {
         e.preventDefault()
@@ -115,10 +91,6 @@ export const Popups = () => {
             el.style.display = "none"
         });
 
-    }
-
-    const textFieldChange = (e) => {
-        setQuestionText(e.target.value)
     }
 
     const timeFieldChange = (e) => {
@@ -253,7 +225,7 @@ export const Popups = () => {
                 <div className="pu_cell">
 
                     <div className="pu_inner popup_menu" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
+                        <a href="#" className="closeform" onClick={closeEvnt}></a>
                         <div className="menu_list">
                             <a href="near_house" onClick={clickMenu}><span>Ипотека от 0,1 %</span></a>
                             <a href="plan_price" onClick={clickMenu}><span>Планировки и цены</span></a>
@@ -269,12 +241,12 @@ export const Popups = () => {
                             В ближайшее время с вами свяжется наш специалист
                         </div>
                         <div className="align_center">
-                            <a className="btn_main" href="#" onClick={close}>Закрыть</a>
+                            <a className="btn_main" href="#" onClick={closeEvnt} style={{zIndex:1000}}>Закрыть</a>
                         </div>
                     </div>
 
                     <div className="pu_inner pu_call" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
+                        <a href="#" className="closeform" onClick={closeEvnt} style={{zIndex:1000}}></a>
                         <div className="pu_tm">
                             <span>Заказать звонок</span>
                         </div>
@@ -296,7 +268,7 @@ export const Popups = () => {
                         </form>
                     </div>
                     <div className="pu_inner pu_get" style={{ display: "none" }}>
-                        <div className="closeform" onClick={close}><img src="img/closeform.svg" /></div>
+                        <div className="closeform" onClick={closeEvnt} style={{zIndex:1000}}><img src="img/closeform.svg" /></div>
                         <div className="tm"><b>Получите расчет ежемесячного платежа по ипотеке с господдержкой</b></div>
                         <form className="form_content form_w50">
                             <div className="form_item form_item_select">
@@ -332,7 +304,7 @@ export const Popups = () => {
                     </div>
 
                     <div className="pu_inner pu_flat" style={{ display: "none" }}>
-                        <div className="closeform" onClick={close}><img src="img/closeform.svg" /></div>
+                        <div className="closeform" onClick={closeEvnt} style={{zIndex:1000}}><img src="img/closeform.svg" /></div>
                         <div className="tm"><b>Двухкомнатная квартира:</b></div>
                         <div className="pu_flat_content">
                             <div className="pu_flat_content__l">
@@ -363,7 +335,7 @@ export const Popups = () => {
                     </div>
 
                     <div className="pu_inner pu_liter" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
+                        <a href="#" className="closeform" onClick={closeEvnt} style={{zIndex:1000}}></a>
                         <div className="pu_tm">
                             <span><l>Планировки</l></span> <b>Литера 1</b>
                             <sub id='plan_types'>Все квартиры с предчистовой отделкой WHITE BOX</sub>
